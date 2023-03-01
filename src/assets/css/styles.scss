@@ -1,0 +1,149 @@
+@import "./reset";
+@import "./snippet";
+@import "./new";
+@import "./animation";
+@import "./button";
+
+//--------------------------------------------------------
+* {
+    box-sizing: border-box;
+    font-family: 'Raleway', sans-serif;
+    letter-spacing: 1px;
+}
+
+img {
+    @include imgDefault;
+}
+
+body {
+    // background: linear-gradient(to right, #B7C4CF, #BFC3C7, #C7C2BF, #CFC1B6, #D7C0AE) no-repeat center;
+    // background: linear-gradient(var(--orange), var(--peach), var(--beige), var(--darkblue), var(--lightblue)) no-repeat center;
+    // background: linear-gradient(#b7c4cf, #eee3cb, #d7c0ae, #967e76, #2b2b2b) no-repeat center;
+    background-color: var(--white);
+    background-size: cover;
+}
+
+.darkmode{
+    background-color:var(--black);
+    color:var(--white);
+}
+
+.dark{
+    color:var(--white);
+}
+
+.l-wrapper{
+    display: none;
+}
+
+.c-header {
+    position: relative;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 65px;
+    z-index: 100;
+    // background-color: black;
+    // background: linear-gradient(to right, #B7C4CF, #BFC3C7, #C7C2BF, #CFC1B6, #D7C0AE) no-repeat center;
+    // box-shadow: inset 0px -5px 1px 1px;
+
+    @include sp {
+        height: 40px;
+    }
+
+    &__logo {
+        display: inline-block;
+        padding: 20px;
+        @include text(26px, 800, 25px);
+
+        @include sp {
+            padding: 10px;
+            max-width: 128px;
+            @include text(18px, 800, 22px);
+        }
+    }
+
+    &__mode{
+        display: inline-block;
+        position: relative;
+        top:5px;
+
+        &:hover{
+            cursor: pointer;
+        }
+
+        img{
+            width: 30px;
+            animation: wiggle 2s infinite alternate-reverse;
+        }
+        
+    }
+}
+
+#light {
+    display: block;
+}
+
+#dark {
+    display: none;
+}
+
+.c-nav {
+
+    @include tp {
+        display: none;
+    }
+
+    position: fixed;
+    top: 0;
+    right: 0;
+    z-index: 100;
+
+    &__block {
+        position: relative;
+    }
+
+    &__list {
+        display: flex;
+        height: 65px;
+        align-items: center;
+        padding-right: 20px;
+    }
+
+    &__link {
+        display: inline-block;
+        position: relative;
+        @include text(22px, 600, normal);
+        cursor: pointer;
+        padding: 10px 14px;
+    }
+
+    &__link:hover {
+        transition: color 0.4s ease 0s;
+        color: #399BD2;
+    }
+}
+
+.c-bkg {
+    background-color: rgba(146, 184, 205, 0.2);
+}
+
+
+// -----------------------------------------top---------------------------------------
+
+
+//-----------------------------------footer-------------------------------------------
+.c-footer {
+    text-align: center;
+    padding: 30px 0;
+    @include sp{
+        padding: 10px;
+    }
+}
+
+.c-footer__license {
+    @include text(10px, 400, 12px);
+    font-family: 'Montserrat', sans-serif;
+    text-align: center;
+    // padding: 10px;
+}

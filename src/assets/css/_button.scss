@@ -1,0 +1,1335 @@
+.slide {
+    display: inline-flex;
+    display: inline-flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    padding: 10px 40px;
+    font-weight: 500;
+}
+
+.btn {
+    position: relative;
+    overflow: hidden;
+    text-decoration: none;
+    display: block;
+    margin: 10px 5px;
+    padding: 5px;
+    text-align: center;
+    outline: none;
+    background-color: rgba(191, 195, 199, 1);
+    width: 150px;
+    border: 0.5px solid #555;
+
+    // &:after {
+    //     content: "";
+    //     position: absolute;
+    //     top: 0;
+    //     left: 0;
+    //     width: 234px;
+    //     height: 41px;
+    // }
+
+    &:hover span {
+        transition: color 0.3s ease;
+        color: #fff;
+    }
+
+    span {
+        position: relative;
+        z-index: 5;
+        color: #333;
+        font-family: 'Klee One', cursive;
+        font-size: 11px;
+    }
+}
+
+.more {
+    position: relative;
+    right: -270px;
+    font-size: 15px;
+    padding: 15px;
+
+    &:hover {
+        cursor: pointer;
+        color: #fff;
+    }
+}
+
+//------------------1. left to right------------------------------------
+.bgleft_right {
+    &:before {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        z-index: 2;
+        background-color: #333;
+        width: 100%;
+        height: 100%;
+        transition: transform 0.4s cubic-bezier(0.8, 0, 0.2, 1) 0s;
+        transform: scale(0, 1);
+        transform-origin: right top; //amount of coverage
+    }
+
+    &:hover:before {
+        transform-origin: left top; //place to start when hover
+        transform: scale(1, 1); //amount of coverage 
+    }
+}
+
+//------------------2. left to left------------------------------------
+.bgleft_left {
+    &:before {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        z-index: 2;
+        background-color: #333;
+        width: 100%;
+        height: 100%;
+        transition: transform 0.4s cubic-bezier(0.8, 0, 0.2, 1) 0s;
+        transform: scale(0, 1); //place to end when hover off
+        transform-origin: left top; //amount of coverage
+    }
+
+    &:hover:before {
+        transform-origin: left top; //place to start when hover
+        transform: scale(1, 1); //amount of coverage 
+    }
+}
+
+//------------------3. right to left------------------------------------
+.bgright_left {
+    &:before {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        z-index: 2;
+        background-color: #333;
+        width: 100%;
+        height: 100%;
+        transition: transform 0.4s cubic-bezier(0.8, 0, 0.2, 1) 0s;
+        transform: scale(0, 1); //place to end when hover off
+        transform-origin: left top; //amount of coverage
+    }
+
+    &:hover:before {
+        transform-origin: right top; //place to start when hover
+        transform: scale(1, 1); //amount of coverage 
+    }
+}
+
+//------------------4. right to right------------------------------------
+.bgright_right {
+    &:before {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        z-index: 2;
+        background-color: #333;
+        width: 100%;
+        height: 100%;
+        transition: transform 0.4s cubic-bezier(0.8, 0, 0.2, 1) 0s;
+        transform: scale(0, 1); //place to end when hover off
+        transform-origin: right top; //amount of coverage
+
+    }
+
+    &:hover:before {
+        transform-origin: right top; //place to start when hover
+        transform: scale(1, 1); //amount of coverage 
+    }
+}
+
+//------------------5. top to bot------------------------------------
+.bgtop_bot {
+    &:before {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        z-index: 2;
+        background-color: #333;
+        width: 100%;
+        height: 100%;
+        transition: transform 0.4s cubic-bezier(0.8, 0, 0.2, 1) 0s;
+        transform: scale(1, 0); //place to end when hover off
+        transform-origin: bottom; //amount of coverage
+    }
+
+    &:hover:before {
+        transform-origin: top; //place to start when hover
+        transform: scale(1, 1); //amount of coverage 
+    }
+}
+
+//------------------6. top to top------------------------------------
+.bgtop_top {
+    &:before {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        z-index: 2;
+        background-color: #333;
+        width: 100%;
+        height: 100%;
+        transition: transform 0.4s cubic-bezier(0.8, 0, 0.2, 1) 0s;
+        transform: scale(1, 0);
+        transform-origin: top;
+    }
+
+    &:hover:before {
+        transform-origin: top;
+        transform: scale(1, 1);
+    }
+}
+
+//------------------7. bot to top------------------------------------
+.bgbot_top {
+    &:before {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        z-index: 2;
+        background-color: #333;
+        width: 100%;
+        height: 100%;
+        transition: transform 0.4s cubic-bezier(0.8, 0, 0.2, 1) 0s;
+        transform: scale(1, 0);
+        transform-origin: top;
+    }
+
+    &:hover:before {
+        transform-origin: bottom;
+        transform: scale(1, 1);
+    }
+}
+
+//------------------8. bot to bot---------------------------------------
+.bgbot_bot {
+    &:before {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        z-index: 2;
+        background-color: #333;
+        width: 100%;
+        height: 100%;
+        transition: transform 0.4s cubic-bezier(0.8, 0, 0.2, 1) 0s;
+        transform: scale(1, 0);
+        transform-origin: bottom;
+    }
+
+    &:hover:before {
+        transform-origin: bottom;
+        transform: scale(1, 1);
+    }
+}
+
+//------------------9. center to edge------------------------------------
+.bgcenter_edge {
+    &:before {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        z-index: 2;
+        background-color: #333;
+        width: 100%;
+        height: 100%;
+        transition: transform 0.4s cubic-bezier(0.8, 0, 0.2, 1) 0s;
+        transform: scale(0, 1);
+        transform-origin: top;
+    }
+
+    &:hover:before {
+        transform: scale(1, 1);
+    }
+}
+
+//------------------10. center to edge2------------------------------------
+.bgcenter_edge2 {
+    &:before {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        z-index: 2;
+        background-color: #333;
+        width: 100%;
+        height: 100%;
+        transition: transform 0.4s cubic-bezier(0.8, 0, 0.2, 1) 0s;
+        transform: scale(1, 0);
+        transform-origin: center;
+    }
+
+    &:hover:before {
+        transform: scale(1, 1);
+    }
+}
+
+//------------------11. center to edge3------------------------------------
+.bgcenter_edge3 {
+    &:before {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        z-index: 2;
+        background-color: #333;
+        width: 100%;
+        height: 100%;
+        transition: transform 0.4s cubic-bezier(0.8, 0, 0.2, 1) 0s;
+        transform: scale(0, 0);
+        transform-origin: center;
+    }
+
+    &:hover:before {
+        transform: scale(1, 1);
+    }
+}
+
+//------------------12. skew----------------------------------------------
+.bgskew {
+    &:before {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: -115%;
+        background-color: #333;
+        width: 110%;
+        height: 100%;
+        transform: skewX(-25deg);
+    }
+
+    &:hover:before {
+        animation: skewanimate 0.5s forwards;
+    }
+
+    @keyframes skewanimate {
+        100% {
+            left: -5%;
+        }
+    }
+}
+
+//------------------13. lefttop to rightbot------------------------------------
+.bgleft_dia {
+    &:before {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        z-index: 2;
+        background-color: #333;
+        width: 100%;
+        height: 100%;
+        transition: transform 0.4s cubic-bezier(0.8, 0, 0.2, 1) 0s;
+        transform: scale(0, 0); //place to end when hover off
+        transform-origin: right bottom; //amount of coverage
+    }
+
+    &:hover:before {
+        transform-origin: left top; //place to start when hover
+        transform: scale(1, 1); //amount of coverage 
+    }
+}
+
+//------------------14. lefttop to lefttop------------------------------------
+.bgleft_dia2 {
+    &:before {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        z-index: 2;
+        background-color: #333;
+        width: 100%;
+        height: 100%;
+        transition: transform 0.4s cubic-bezier(0.8, 0, 0.2, 1) 0s;
+        transform: scale(0, 0); //place to end when hover off
+        transform-origin: left top; //amount of coverage
+    }
+
+    &:hover:before {
+        transform-origin: left top; //place to start when hover
+        transform: scale(1, 1); //amount of coverage 
+    }
+}
+
+//------------------15. righttop to leftbot------------------------------------
+.bgright_dia {
+    &:before {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        z-index: 2;
+        background-color: #333;
+        width: 100%;
+        height: 100%;
+        transition: transform 0.4s cubic-bezier(0.8, 0, 0.2, 1) 0s;
+        transform: scale(0, 0);
+        transform-origin: left bottom;
+    }
+
+    &:hover:before {
+        transform-origin: right top;
+        transform: scale(1, 1);
+    }
+}
+
+//------------------16. righttop to righttop------------------------------------
+.bgright_dia2 {
+    &:before {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        z-index: 2;
+        background-color: #333;
+        width: 100%;
+        height: 100%;
+        transition: transform 0.4s cubic-bezier(0.8, 0, 0.2, 1) 0s;
+        transform: scale(0, 0);
+        transform-origin: right top;
+    }
+
+    &:hover:before {
+        transform-origin: right top;
+        transform: scale(1, 1);
+    }
+}
+
+//------------------btn----for rotate------------------------------------------
+.btn2 {
+    position: relative;
+    display: block;
+    width: 100%;
+    max-width: 237px;
+    height: 44px;
+    text-align: center;
+    margin: 10px 20px;
+
+    span {
+        display: block;
+        position: absolute; //differ from above, absolute >> so adjust by line height, cant by top/left ---- border moves as well
+        width: 100%;
+        line-height: 44px;
+        top: 0;
+        border: 1px solid #333;
+        transform-style: preserve-3d;
+        transition: 0.4s;
+
+        font-family: 'Klee One', cursive;
+        font-size: 11px;
+    }
+
+}
+
+// //------------------17. rotate front-----------------------------------------
+// .rotatefront {
+//     span:nth-child(1) {
+//         background-color: #fff;
+//         color: #333;
+//         transform: rotateX(0deg);
+//         transform-origin: 0 50% -23px;
+//     }
+
+//     &:hover span:nth-child(1) {
+//         transform: rotateX(-90deg);
+//     }
+
+//     span:nth-child(2) {
+//         background: #000;
+//         color: #fff;
+//         transform: rotateX(90deg);
+//         transform-origin: 0 50% -23px;
+//     }
+
+//     &:hover span:nth-child(2) {
+//         transform: rotateX(0deg);
+//     }
+// }
+
+// //------------------18. rotate back------------------------------------------
+// .rotateback {
+//     span:nth-child(1) {
+//         background-color: #fff;
+//         color: #333;
+//         transform: rotateX(0deg);
+//         transform-origin: 0 50% -22px;
+//     }
+
+//     &:hover span:nth-child(1) {
+//         transform: rotateX(90deg);
+//     }
+
+//     span:nth-child(2) {
+//         background: #000;
+//         color: #fff;
+//         transform: rotateX(-90deg);
+//         transform-origin: 0 50% -22px;
+//     }
+
+//     &:hover span:nth-child(2) {
+//         transform: rotateX(0deg);
+//     }
+// }
+
+// //------------------19. rotate left------------------------------------------
+// .rotateleft {
+//     span:nth-child(1) {
+//         background-color: #fff;
+//         color: #333;
+//         transform: rotateY(0deg);
+//         transform-origin: 50% 0 -118px;
+//     }
+
+//     &:hover span:nth-child(1) {
+//         transform: rotateY(-90deg);
+//     }
+
+//     span:nth-child(2) {
+//         background: #000;
+//         color: #fff;
+//         transform: rotateY(90deg);
+//         transform-origin: 50% 0 -118px;
+//     }
+
+//     &:hover span:nth-child(2) {
+//         transform: rotateY(0deg);
+//     }
+// }
+
+// //------------------20. rotate right------------------------------------------
+// .rotateright {
+//     span:nth-child(1) {
+//         background-color: #fff;
+//         color: #333;
+//         transform: rotateY(0deg);
+//         transform-origin: 50% 0 -118px;
+//     }
+
+//     &:hover span:nth-child(1) {
+//         transform: rotateY(90deg);
+//     }
+
+//     span:nth-child(2) {
+//         background: #000;
+//         color: #fff;
+//         transform: rotateY(-90deg);
+//         transform-origin: 50% 0 -118px;
+//     }
+
+//     &:hover span:nth-child(2) {
+//         transform: rotateY(0deg);
+//     }
+// }
+
+// //------------------21. float 1 ---------------------------------------------
+// .float1 {
+//     color: #333;
+
+//     &:hover {
+//         box-shadow: 0 7px 10px rgba(0, 0, 0, 0.3);
+//         border-color: transparent;
+//         color: brown;
+//     }
+// }
+
+// //------------------22. float 2 ---------------------------------------------
+// .float2 {
+//     color: #333;
+
+//     &:hover {
+//         top: -5px;
+//         box-shadow: 0 2px 3px rgba(0, 0, 0, 0.3);
+//     }
+// }
+
+// //------------------23. line stretch1 ---------------------------------------------
+// .linestretch1 {
+//     position: relative;
+//     text-decoration: none;
+//     display: block;
+//     margin: 10px 20px;
+//     padding: 10px 30px;
+//     text-align: center;
+//     outline: none;
+//     // background-color: #fff;
+//     width: 176px;
+//     color: #333;
+
+
+//     &:before {
+//         position: absolute;
+//         content: "";
+//         top: 0;
+//         left: 0;
+//         width: 10px;
+//         height: 10px;
+//         border: solid #333;
+//         border-width: 2px 0 0 2px;
+//         transition: all 0.4s ease;
+//     }
+
+//     &:after {
+//         position: absolute;
+//         content: "";
+//         bottom: 0;
+//         right: 0;
+//         width: 10px;
+//         height: 10px;
+//         border: solid #333;
+//         border-width: 0 2px 2px 0;
+//         transition: all 0.4s ease;
+//     }
+
+//     &:hover:before,
+//     &:hover:after {
+//         width: calc(100% - 2px);
+//         height: calc(100% - 2px);
+//         border-color: #666
+//     }
+// }
+
+// //------------------24. line stretch2 ---------------------------------------------
+// .linestretch2 {
+//     position: relative;
+//     text-decoration: none;
+//     display: block;
+//     margin: 10px 20px;
+//     padding: 10px 30px;
+//     text-align: center;
+//     outline: none;
+//     // background-color: #fff;
+//     width: 167px;
+//     color: #333;
+//     border: 1px solid #333;
+
+
+//     &:before {
+//         position: absolute;
+//         content: "";
+//         top: -6px;
+//         left: -6px;
+//         width: 10px;
+//         height: 10px;
+//         border: solid #333;
+//         border-width: 1px 0 0 1px;
+//         transition: all 0.4s ease;
+//     }
+
+//     &:after {
+//         position: absolute;
+//         content: "";
+//         bottom: -6px;
+//         right: -6px;
+//         width: 10px;
+//         height: 10px;
+//         border: solid #333;
+//         border-width: 0 1px 1px 0;
+//         transition: all 0.4s ease;
+//     }
+
+//     &:hover {
+//         background-color: #333;
+//         color: #fff;
+//     }
+
+//     &:hover:before,
+//     &:hover:after {
+//         width: calc(100% + 11px);
+//         height: calc(100% + 11px);
+//         border-color: #666;
+//     }
+// }
+
+// //------------------25. line stretch3 ---------------------------------------------
+// .linestretch3 {
+//     position: relative;
+//     display: block;
+//     color: #333;
+//     margin: 10px 20px;
+//     padding: 10px 30px;
+//     text-align: center;
+//     background-color: #fff;
+//     color: #333;
+//     text-decoration: none;
+//     outline: none;
+//     transition: all 0.4s;
+//     transition-delay: 0.4s;
+//     width: 176px;
+
+//     &:hover {
+//         transition-delay: 0.6s;
+//         background-color: #333;
+//         color: #fff;
+
+//         span:before,
+//         span:after {
+//             height: 100%;
+//         }
+//     }
+
+//     &:hover::before,
+//     &:hover::after {
+//         width: 100%;
+//     }
+
+//     //for horizontal line - need delay to complete the vertical line first
+//     &::before {
+//         content: "";
+//         position: absolute;
+//         width: 0;
+//         height: 1px;
+//         background-color: #333;
+//         transition: all 0.2s linear;
+//         left: 0;
+//         bottom: 0;
+//         transition-delay: 0.2s;
+//     }
+
+//     &::after {
+//         content: "";
+//         position: absolute;
+//         width: 0;
+//         height: 1px;
+//         background-color: #333;
+//         transition: all 0.2s linear;
+//         right: 0;
+//         top: 0;
+//         transition-delay: 0.2s;
+//     }
+
+//     //for vertical line - no need delay
+//     span {
+//         display: block;
+
+//         &::before {
+//             content: "";
+//             position: absolute;
+//             width: 1px;
+//             height: 0;
+//             background-color: #333;
+//             transition: all 0.2s linear;
+//             left: 0;
+//             top: 0;
+//         }
+
+//         &:after {
+//             content: "";
+//             position: absolute;
+//             width: 1px;
+//             height: 0;
+//             background-color: #333;
+//             transition: all 0.2s linear;
+//             right: 0;
+//             bottom: 0;
+//         }
+//     }
+// }
+
+// //------------------26. line stretch4 ---------------------------------------------
+// .linestretch4 {
+//     position: relative;
+//     display: block;
+//     color: #333;
+//     margin: 10px 20px;
+//     padding: 10px 30px;
+//     text-align: center;
+//     background-color: #fff;
+//     color: #333;
+//     text-decoration: none;
+//     outline: none;
+//     transition: all 0.4s;
+//     transition-delay: 0.7s; // delay for mouseout
+//     width: 176px;
+
+//     &:hover {
+//         transition-delay: 0.9s; // delay for hover
+//         background-color: #333;
+//         color: #fff;
+
+//         span:before,
+//         span:after {
+//             height: 100%;
+//         }
+//     }
+
+//     &:hover::before,
+//     &:hover::after {
+//         width: 100%;
+//     }
+
+//     //for horizontal line 
+
+//     &::before {
+//         content: "";
+//         position: absolute;
+//         width: 0;
+//         height: 1px;
+//         background-color: #333;
+//         transition: all 0.2s linear;
+//         right: 0;
+//         top: 0;
+//         transition-delay: 0.4s;
+//     }
+
+//     &::after {
+//         content: "";
+//         position: absolute;
+//         width: 0;
+//         height: 1px;
+//         background-color: #333;
+//         transition: all 0.2s linear;
+//         left: 0;
+//         bottom: 0;
+//         // transition-delay: 0.2s;
+//     }
+
+
+//     //for vertical line
+//     span {
+//         display: block;
+
+//         &::before {
+//             content: "";
+//             position: absolute;
+//             width: 1px;
+//             height: 0;
+//             background-color: #333;
+//             transition: all 0.2s linear;
+//             left: 0;
+//             top: 0;
+//             transition-delay: 0.6s;
+//         }
+
+//         &:after {
+//             content: "";
+//             position: absolute;
+//             width: 1px;
+//             height: 0;
+//             background-color: #333;
+//             transition: all 0.2s linear;
+//             right: 0;
+//             bottom: 0;
+//             transition-delay: 0.2s;
+//         }
+//     }
+// }
+
+// //------------------27. line stretch5 ---------------------------------------------
+// .linestretch5 {
+//     position: relative;
+//     display: block;
+//     color: #333;
+//     margin: 10px 20px;
+//     padding: 10px 30px;
+//     text-align: center;
+//     background-color: #fff;
+//     color: #333;
+//     text-decoration: none;
+//     outline: none;
+//     transition: all 0.4s;
+//     transition-delay: 0.4s; // delay for mouseout and hover if there is only one
+//     width: 176px;
+
+//     &:hover {
+//         // transition-delay: 0.2s; // delay for hover
+//         background-color: #333;
+//         color: #fff;
+
+//         span:before,
+//         span:after {
+//             height: 100%;
+//         }
+//     }
+
+//     &:hover::before,
+//     &:hover::after {
+//         width: 100%;
+//     }
+
+//     //for horizontal line 
+//     &::before {
+//         content: "";
+//         position: absolute;
+//         width: 0;
+//         height: 1px;
+//         background-color: #333;
+//         transition: all 0.2s linear;
+//         right: 0;
+//         bottom: 0;
+//         // transition-delay: 0.2s;
+//     }
+
+//     &::after {
+//         content: "";
+//         position: absolute;
+//         width: 0;
+//         height: 1px;
+//         background-color: #333;
+//         transition: all 0.2s linear;
+//         left: 0;
+//         top: 0;
+//         // transition-delay: 0.4s;
+//     }
+
+//     //for vertical line
+//     span {
+//         display: block;
+
+//         &::before {
+//             content: "";
+//             position: absolute;
+//             width: 1px;
+//             height: 0;
+//             background-color: #333;
+//             transition: all 0.2s linear;
+//             left: 0;
+//             top: 0;
+//             // transition-delay: 0.6s;
+//         }
+
+//         &:after {
+//             content: "";
+//             position: absolute;
+//             width: 1px;
+//             height: 0;
+//             background-color: #333;
+//             transition: all 0.2s linear;
+//             right: 0;
+//             bottom: 0;
+//             // transition-delay: 0.2s;
+//         }
+//     }
+// }
+
+// //------------------28. line stretch6 ---------------------------------------------
+// .linestretch6 {
+//     position: relative;
+//     display: block;
+//     color: #333;
+//     margin: 10px 20px;
+//     padding: 10px 30px;
+//     text-align: center;
+//     background-color: #fff;
+//     color: #333;
+//     text-decoration: none;
+//     outline: none;
+//     transition: all 0.4s;
+//     transition-delay: 0.4s; // delay for mouseout and hover if there is only one
+//     width: 176px;
+
+//     &:hover {
+//         // transition-delay: 0.2s; // delay for hover
+//         background-color: #333;
+//         color: #fff;
+
+//         span:before,
+//         span:after {
+//             height: 100%;
+//         }
+//     }
+
+//     &:hover::before,
+//     &:hover::after {
+//         width: 100%;
+//     }
+
+//     //for horizontal line 
+//     &::before {
+//         content: "";
+//         position: absolute;
+//         width: 0;
+//         height: 1px;
+//         background-color: #333;
+//         transition: all 0.2s linear;
+//         right: 0;
+//         bottom: 0;
+//         // transition-delay: 0.2s;
+//     }
+
+//     &::after {
+//         content: "";
+//         position: absolute;
+//         width: 0;
+//         height: 1px;
+//         background-color: #333;
+//         transition: all 0.2s linear;
+//         left: 0;
+//         top: 0;
+//         // transition-delay: 0.4s;
+//     }
+
+//     //for vertical line
+//     span {
+//         display: block;
+
+//         &::before {
+//             content: "";
+//             position: absolute;
+//             width: 1px;
+//             height: 0;
+//             background-color: #333;
+//             transition: all 0.2s linear;
+//             left: 0;
+//             bottom: 0;
+//             // transition-delay: 0.6s;
+//         }
+
+//         &:after {
+//             content: "";
+//             position: absolute;
+//             width: 1px;
+//             height: 0;
+//             background-color: #333;
+//             transition: all 0.2s linear;
+//             right: 0;
+//             top: 0;
+//             // transition-delay: 0.2s;
+//         }
+//     }
+// }
+
+// //------------------29. top - top 2lines first-------------------------------------
+// .btn3 {
+//     position: relative;
+//     display: inline-block;
+//     margin: 10px 20px;
+//     padding: 10px 30px;
+//     color: #333;
+//     border: 1px solid #ccc;
+//     text-decoration: none;
+//     outline: none;
+//     overflow: hidden;
+//     background-color: white;
+
+//     span {
+//         position: relative;
+//         display: block;
+//         z-index: 5;
+//         font-family: 'Klee One', cursive;
+//         font-size: 11px;
+//     }
+
+//     &:hover {
+//         transition-delay: .4s;
+//         color: white;
+//     }
+// }
+
+// .bgtop_top2lines {
+
+//     span::before,
+//     span::after {
+//         content: '';
+//         position: absolute;
+//         width: 2px;
+//         height: 0;
+//         background: #333;
+//         transition: all .3s;
+//     }
+
+//     span::before {
+//         left: -30px;
+//         top: -9px;
+//     }
+
+//     span::after {
+//         right: -30px;
+//         top: -9px;
+//     }
+
+//     &:hover span::before,
+//     &:hover span::after {
+//         height: 175%;
+//     }
+
+//     &::before {
+//         content: '';
+//         position: absolute;
+//         left: 0;
+//         top: 0;
+//         z-index: 2;
+//         width: 100%;
+//         height: 0;
+//         background: #333;
+//         transition: all .3s;
+//     }
+
+//     &:hover::before {
+//         height: 100%;
+//         transition-delay: .4s;
+//         // z-index: 1;
+//     }
+
+// }
+
+// //------------------30. line stretch7 ---------------------------------------------
+// .linestretch7 {
+//     position: relative;
+//     display: block;
+//     color: #333;
+//     margin: 10px 20px;
+//     padding: 10px 30px;
+//     text-align: center;
+//     background-color: #fff;
+//     color: #333;
+//     text-decoration: none;
+//     outline: none;
+//     transition: all 0.4s;
+//     transition-delay: 0.7s; // delay for mouseout
+//     width: 176px;
+
+//     &:hover::before {
+//         animation: loop 0.2s linear infinite;
+//         display: block;
+//     }
+
+//     @keyframes loop {
+//         0% {
+//             left: -5px;
+//             bottom: -5px;
+//             background-color: yellow;
+//         }
+
+//         35% {
+//             left: 231px;
+//             bottom: -5px;
+//             background-color: green;
+//         }
+
+//         50% {
+//             left: 231px;
+//             bottom: 39px;
+//             background-color: red;
+//         }
+
+//         85% {
+//             left: -5px;
+//             bottom: 39px;
+//             background-color: blue;
+//         }
+
+//         100% {
+//             left: -5px;
+//             bottom: 0px;
+//             background-color: white;
+//         }
+//     }
+
+//     &::before {
+//         content: "";
+//         position: absolute;
+//         width: 10px;
+//         height: 10px;
+//         border-radius: 5px;
+//         background-color: #333;
+//         // transition: all 0.4s ease;
+//         left: -5px;
+//         bottom: -5px;
+//         // transition-delay: 0.4s;
+//         display: none;
+//     }
+
+// }
+
+// //------------------31. rectangle -------------------------------------------------
+// .rectangle {
+//     overflow: visible !important;
+//     // z-index: 4;
+
+//     &:before {
+//         content: "";
+//         display: block;
+//         position: absolute;
+//         left: -10px;
+//         top: 6px;
+//         border: 1px solid white;
+//         background-color: black;
+
+//         // z-index: 1;
+//         width: 253px;
+//         height: 30px;
+//         opacity: 0;
+//         transition: all 0.4s ease;
+//     }
+
+//     &:hover:before {
+//         opacity: 1;
+//     }
+
+//     &:hover {
+//         border: 1px solid white;
+//         background-color: black;
+//         transition: all 0.4s ease;
+//     }
+// }
+
+// //------------------32. arrow -------------------------------------------------
+// .arrow {
+//     // overflow: visible !important;
+
+//     &:before {
+//         content: "";
+//         display: block;
+//         position: absolute;
+//         left: -92%;
+//         top: 0;
+//         width: 100%;
+//         height: 21.5px;
+//         transform: skewX(60deg);
+//         background-color: #333;
+//         z-index: 2;
+//     }
+
+//     &:hover:before {
+//         animation: skewanimate2 0.5s forwards;
+//     }
+
+//     @keyframes skewanimate2 {
+//         100% {
+//             left: -8%;
+//         }
+//     }
+
+//     &:after {
+//         content: "";
+//         display: block;
+//         position: absolute;
+//         left: -92%;
+//         bottom: 0;
+//         width: 100%;
+//         height: 22px;
+//         transform: skewX(-60deg);
+//         background-color: #333;
+//         z-index: 2;
+//     }
+
+//     &:hover:after {
+//         animation: skewanimate2 0.5s forwards;
+//     }
+
+//     @keyframes skewanimate2 {
+//         100% {
+//             left: -8%;
+//         }
+//     }
+// }
+
+// //------------------33. arrow2 -------------------------------------------------
+// .arrow2 {
+//     // overflow: visible !important;
+
+//     &:before {
+//         content: "";
+//         display: block;
+//         position: absolute;
+//         left: -92%;
+//         top: 0;
+//         width: 81.7%;
+//         height: 21.5px;
+//         transform: skewX(45deg);
+//         background-color: #333;
+//         // z-index: 2;
+//     }
+
+//     &:hover:before {
+//         animation: skewanimate3 0.5s forwards;
+//     }
+
+//     @keyframes skewanimate3 {
+//         100% {
+//             left: 5%;
+//         }
+//     }
+
+//     &:after {
+//         content: "";
+//         display: block;
+//         position: absolute;
+//         right: -92%;
+//         bottom: 0;
+//         width: 81.7%;
+//         height: 22px;
+//         transform: skewX(45deg);
+//         background-color: #333;
+//         // z-index: 2;
+//     }
+
+//     &:hover:after {
+//         animation: skewanimate4 0.5s forwards;
+//     }
+
+//     @keyframes skewanimate4 {
+//         100% {
+//             right: 4%;
+//         }
+//     }
+
+//     &:hover {
+//         transition: all 0.4s ease;
+//         border-color: transparent;
+//         background-color: transparent;
+//     }
+// }
+
+// //------------------34. pattern -------------------------------------------------
+// .pattern {
+
+//     // overflow: visible !important;
+
+//     &:before {
+//         content: "";
+//         position: absolute;
+//         top: -100%;
+//         left: 0;
+//         width: 100%;
+//         height: 100%;
+//         background: repeating-linear-gradient(to right, black, black 5%, transparent 5%, transparent 10%);
+//         transition: transform 0.5s ease;
+//     }
+
+//     &:hover:before {
+//         // animation: patternup 0.5s forwards;
+//         transform: translateY(100%);
+//     }
+
+//     // @keyframes patternup {
+//     //     100% {
+//     //         top: 0;
+//     //     }
+//     // }
+
+//     &:after {
+//         content: "";
+//         position: absolute;
+//         bottom: -100%;
+//         right: 0;
+//         width: 100%;
+//         height: 100%;
+//         background: repeating-linear-gradient(to left, black, black 5%, transparent 5%, transparent 10%);
+//         transition: transform 0.5s ease;
+//     }
+
+//     &:hover:after {
+//         // animation: patterndown 0.5s forwards;
+//         transform: translateY(-100%);
+//     }
+
+//     // @keyframes patterndown {
+//     //     100% {
+//     //         bottom: 0;
+//     //     }
+//     // }
+// }

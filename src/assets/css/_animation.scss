@@ -1,0 +1,237 @@
+//--------------------------fade in------------------------------
+
+.fadein {
+    opacity: 0;
+}
+
+.fade_on {
+    animation: fadeAnimation 1s forwards;
+}
+
+@keyframes fadeAnimation {
+    from {
+        opacity: 0;
+        transform: translateY(100px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.fromleft {
+    animation: fleft 1s 2s ease-out forwards;
+}
+
+@keyframes fleft {
+    from {
+        opacity: 0;
+        transform: translateX(200px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+.fromright {
+    animation: fright 1s 2s ease-out forwards;
+}
+
+@keyframes fright {
+    from {
+        opacity: 0;
+        transform: translateX(-200px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+// ---------------------------wiggle----------------------------
+@keyframes wiggle {
+    0% {
+        transform: rotate(0deg);
+    }
+
+    50% {
+        transform: rotate(7deg);
+        transform: scale(0.8);
+    }
+
+    75% {
+        transform: rotate(-10deg);
+        // transform: scale(1.3);
+    }
+
+    100% {
+        transform: rotate(0deg);
+    }
+}
+
+//----------------------------typing--------------------------
+// @keyframes typing {
+//     from {
+//         width: 0
+//     }
+
+//     to {
+//         width: 100%;
+//     }
+// }
+
+// @keyframes blink {
+//     from {
+//         border-color: transparent;
+//     }
+
+//     to {
+//         border-color: #967e76;
+//     }
+// }
+
+// ---------------------------line----------------------------
+@keyframes runningright {
+    0% {
+        left: -100%;
+    }
+
+    50% {
+        left: -15px;
+    }
+
+    100% {
+        left: -100%;
+    }
+}
+
+//-------------------------swiper----------------------------
+.swiper {
+    width: 100%;
+    height: auto;
+
+}
+
+.swiper-slide {
+    text-align: center;
+    font-size: 18px;
+    // background: rgba(207, 193, 182, 0.4);
+    // background-color: rgba(207, 193, 182);
+    /* Center slide text vertically */
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    display: flex;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    -webkit-justify-content: center;
+    justify-content: center;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    -webkit-align-items: center;
+    align-items: center;
+}
+
+// .swiper-slide img {
+//     display: block;
+//     width: 100%;
+//     height: 100%;
+//     object-fit: cover;
+// }
+
+.swiper {
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.slide{
+
+    @include sp {
+            padding: 10px 24px 24px!important;
+        }
+    
+    &-img{
+        padding: 25px;
+        &:hover {
+                cursor: pointer;
+        }
+
+        @include sp {
+                padding: 0px
+        }
+        
+    }
+    
+    &-text{
+        font-size: 20px;
+        margin: 0 auto 30px;
+        letter-spacing: 1px;
+        text-align: left;
+        display: inline-block;
+
+        @include sp{
+            font-size: 11px;
+            margin: 15px auto;
+        }
+
+        &-img{
+            display: inline-block;
+            width: 30px;
+            margin-left: 10px;
+            top: 5px;
+            position: relative;
+            &:hover {
+                    cursor: pointer;
+            }
+
+            @include sp{
+                display: none;
+            }
+        }
+    }
+}
+
+.swiper-button-next,
+.swiper-button-prev {
+    --swiper-navigation-color: var(--lightblue); //ここに変更する色を指定
+    @include sp{
+        --swiper-navigation-size: 20px;
+    }
+}
+
+span.swiper-pagination-bullet.swiper-pagination-bullet-active {
+    background-color: var(--lightblue);
+
+}
+
+/* target all bullets */
+span.swiper-pagination-bullet {
+    background-color: brown;
+    @include sp{
+        width: var(--swiper-pagination-bullet-width, var(--swiper-pagination-bullet-size, 4px));
+        height: var(--swiper-pagination-bullet-height, var(--swiper-pagination-bullet-size, 4px));
+    }
+}
+
+// -------------------swiper-----------------------
+// .swiper {
+//     width: 140px;
+//     height: 200px;
+// }
+
+// .swiper-slide {
+//     display: flex;
+//     align-items: center;
+//     justify-content: center;
+//     border-radius: 10px;
+// }
+
+// .swiper-slide {
+//     background-color: rgba(240, 240, 240, 0.8);
+//     // border: 1px solid #2b2b2b;
+//     border: 1px solid rgba(230, 230, 230, 0.2);
+// }

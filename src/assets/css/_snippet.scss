@@ -1,0 +1,97 @@
+:root {
+    --orange: #ff6b35;
+    --peach: #f7c59f;
+    --beige: #efefd0;
+    --darkblue: #004e89;
+    --lightblue: #1a659e;
+
+    --black:#222831;
+    --lightblack:#393E46;
+    --yellow:#FFD369;
+    --gray:#EEEEEE;
+
+    --gray2:#C4B6B6;
+
+    --white:#fff;
+}
+
+@mixin imgDefault {
+    display: block;
+    max-width: 100%;
+    height: auto;
+}
+
+@mixin text($fsize, $fweight, $lheight) {
+    font-size: $fsize;
+    font-weight: $fweight;
+    line-height: $lheight;
+}
+
+// @mixin text($fsize, $fweight, $lheight, $fcolor: #2b2b2b) {
+//     font-size: $fsize;
+//     font-weight: $fweight;
+//     line-height: $lheight;
+//     color: $fcolor;
+// }
+
+@mixin button($width, $height, $boxshadcolor) {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0 auto;
+    max-width: $width;
+    height: $height;
+    background-color: #fff;
+    border: 1px solid #343434;
+    border-radius: 6px;
+    box-shadow: 7px 7px 0px $boxshadcolor;
+    justify-content: center;
+    transition: all 0.5s cubic-bezier(0.25, 1, 0.5, 1);
+}
+
+@mixin hoveranimate {
+    transform: translate(7px, 7px);
+    box-shadow: none;
+}
+
+@mixin adjustment($mwidth, $mrtop: 0, $mrbtm: 0, $ptop: 0, $phoriz: 0, $pbtm: 0) {
+    max-width: $mwidth;
+    margin: $mrtop auto $mrbtm ;
+    padding: $ptop $phoriz $pbtm;
+}
+
+@mixin blueline ($linewidth) {
+    &--line {
+        @include adjustment($linewidth);
+        border-bottom: 4px solid #399BD2;
+        @content;
+    }
+}
+
+@mixin sp {
+    @media screen and (max-width:426px) {
+        @content;
+    }
+}
+
+@mixin tp {
+    @media screen and (max-width:820px) {
+        @content;
+    }
+}
+
+// @mixin devices ($breakpoint) {
+//     //the name of the mixin is devices
+
+//     @if $breakpoint ==tablet {
+//         @media only screen and (max-width: 820px) {
+//             @content;
+//         }
+//     }
+
+//     @if $breakpoint ==mobile {
+//         @media only screen and (max-width: 426px) {
+//             @content;
+//         }
+//     }
+// }

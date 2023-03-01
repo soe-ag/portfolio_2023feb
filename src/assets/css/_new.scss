@@ -1,0 +1,363 @@
+// font-family: 'Raleway', sans-serif;
+// font-family: 'Klee One',cursive;
+
+// -----------------------------------------0.section---------------------------------------
+
+.c-section {
+    // margin: 0;
+    // height: 600px;
+    position: relative;
+    max-width: 800px;
+    margin: 0 auto;
+    box-shadow: 0 10px 20px 0 rgba(150, 150, 150, 0.37);
+    backdrop-filter: blur(5px);
+    border-left: 1px solid rgba(200, 200, 200, 0.18);
+    border-right: 1px solid rgba(200, 200, 200, 0.18);
+
+    // @include sp {
+    //     padding: 50px 0;
+    // }
+
+    &--top {
+        // border-top-left-radius: 30px;
+        // border-top-right-radius: 30px;
+        // margin-top: 60px;
+        border-top: 1px solid rgba(200, 200, 200, 0.18);
+        height: 550px;
+        @include sp{
+            height: 380px;
+        }
+    }
+
+    &--social {
+        height: 240px;
+        // border-bottom-left-radius: 30px;
+        // border-bottom-right-radius: 30px;
+        border-bottom: 1px solid rgba(200, 200, 200, 0.18);
+        @include sp{
+            height: 180px;
+        }
+    }
+
+    &--margin60px {
+        height: 20px;
+        @include sp{
+            height: 0;
+        }
+    }
+}
+
+.c-section__main {
+    // padding-top: 40px;
+    text-align: center;
+}
+
+.c-section__title {
+    text-align: center;
+    @include text(28px, 700, 25px);
+    letter-spacing: 15px;
+    padding: 60px 0 30px;
+    overflow: hidden;
+    display: inline-block;
+    @include sp{
+        font-size: 18px;
+        padding: 45px 0 20px;
+        line-height: 15px;
+    }
+    &--underline {
+        position: relative;
+        top: 10px;
+        height: 2px;
+        background-color: #2f2f2f;
+        // width: 0px;
+        margin: 0 auto;
+        animation: runningright 8s ease-in-out infinite;
+    }
+}
+
+// -----------------------------------1. top -------------------------
+.p-top {
+    &__bkg {
+
+        &--img {
+            position: absolute;
+            @include adjustment(800px);
+            top: 78px;
+            left: 0;
+            right: 0;
+        }
+    }
+
+    &__block {
+        @include adjustment(800px);
+        // border: 1px solid black;
+        margin-top: 80px;
+        @include sp{
+            margin-top: 0;
+        }
+
+    }
+
+    &__head {
+        position: relative;
+        top: 85px;
+        // text-align: center;
+
+        &--big--typed-out {
+            @include text(24px, 600, 25px);
+            letter-spacing: 3px;
+            // padding-bottom: 130px;
+            display: inline-block;
+
+            @include sp{
+                font-size: 18px;
+            }
+        }
+
+        // &--typed-out {
+        //     overflow: hidden;
+        //     white-space: nowrap;
+        //     border-right: 0.15em solid #967e76;
+        //     width: 0;
+        //     animation: typing 1.75s 2s steps(7, end) forwards, blink 0.8s infinite;
+        //     // animation-delay: 2s;
+        // }
+    }
+
+    &__head2 {
+        position: relative;
+        top: 235px;
+
+        &--small--typed-out2 {
+            @include text(22px, 600, 25px);
+            letter-spacing: 3px;
+            display: inline-block;
+
+            @include sp {
+                    font-size: 18px;
+            }
+        }
+
+        
+        // &--typed-out2 {
+        //     overflow: hidden;
+        //     white-space: nowrap;
+        //     border-right: 0.15em solid #967e76;
+        //     width: 0;
+        //     animation: typing 1.75s 2s steps(7, end) forwards, blink 0.8s infinite;
+        //     // animation-delay: 2s;
+        //     @include text(24px, 600, 25px, #fff);
+        //     letter-spacing: 3px;
+        // }
+    }
+
+    &__body {
+        display: inline-flex;
+        flex-direction: column;
+        gap: 10px;
+        position: relative;
+        top: 88px;
+    }
+
+    &__list1,
+    &__list2 {
+        display: flex;
+        opacity: 0;
+
+        &--item {
+            margin: 0 8px;
+            max-width: 45px;
+            @include sp{
+                max-width: 35px;
+            }
+
+            &:hover {
+                animation: wiggle 0.3s;
+            }
+        }
+    }
+
+    &__list2 {
+        @include sp{
+            display: none;
+        }
+    }
+}
+
+// -----------------------------------2. about -------------------------
+
+.p-about {
+    &__block {
+        display: flex;
+        gap: 20px;
+        @include adjustment(800px);
+        // border: 1px solid black;
+        justify-content: space-around;
+        text-align: center;
+        padding: 30px 0;
+    }
+
+    &__box {
+        @include adjustment(400px, 0, 0, 20px, 20px, 20px);
+    }
+
+    &__head {
+        &--title {
+            display: inline-block;
+            @include text(22px, 600, 25px);
+            margin-bottom: 30px;
+            border-bottom: 3px solid;
+        }
+    }
+
+    &__para {
+        padding-bottom: 15px;
+
+        &--title {
+            @include text(16px, 600, 25px);
+        }
+
+        &--subtitle {
+            @include text(16px, 600, 25px);
+            color: black;
+        }
+
+        &--des {
+            @include text(14px, 600, 25px);
+        }
+    }
+
+    &__body{
+        display: block;
+        padding: 40px 50px 80px;
+        line-height: 40px;
+        letter-spacing: 1px;
+        margin: 0 auto;
+
+        @include sp{
+            font-size: 12px;
+            line-height: 25px;
+            padding: 20px 25px 40px;
+        }
+
+        a{
+            font-weight: 1000;
+            letter-spacing: 1.5px;
+
+            &:hover{
+                cursor: pointer;
+            }
+        }
+    }
+}
+
+// -----------------------------------3. skills -------------------------
+.p-skills {
+
+    &__block {
+        @include adjustment (800px);
+        display: flex;
+        flex-direction: column;
+        padding: 10px 0 60px;
+
+        // @include sp{
+        //     padding-bottom: 40px;
+        // }
+    }
+
+    &__box {
+        display: flex;
+        flex-direction: column;
+        overflow: hidden;
+        text-align: center;
+        // border: 1px solid;
+        margin-bottom: 20px;
+        @include sp{
+            margin-bottom: 0;
+        }
+    }
+
+    &__head {
+        @include text(22px, 600, 20px);
+        margin: 30px 0 40px;
+        letter-spacing: 2px;
+        @include sp{
+            @include text(16px, 600, 20px);
+            margin: 20px 0;
+        }
+    }
+
+    &__body {
+        display: flex;
+        justify-content: center;
+        gap: 20px;
+        align-items: baseline;
+
+        @include sp{
+            gap: 10px;
+            margin-bottom: 20px;
+        }
+        // margin: 0 auto;
+        &--item {
+            width: 70px;
+            @include sp{
+                max-width: 30px;
+            }
+            img {
+                margin:0 auto;
+
+                &:hover {
+                    animation: wiggle 0.5s ease;
+                }
+            }
+        }
+
+        &--label {
+            @include text(16px, 600, 20px);
+            letter-spacing: 1px;
+            margin: 10px auto;
+            @include sp{
+                display: none
+            }
+        }
+    }
+}
+
+// -----------------------------------4. works -------------------------
+.p-project {
+
+    &__head {
+        &--title {
+            @include text(18px, 600, 25px);
+            margin: 20px auto 0;
+        }
+    }
+}
+
+
+
+
+// -----------------------------------5. social -------------------------
+.p-social {
+    text-align: center;
+
+    &__head {
+        @include text(22px, 600, 20px);
+        margin: 30px 0 15px;
+    }
+
+    &__body {
+        &--item {
+            display: inline-block;
+            margin: 5px;
+            @include sp{
+                max-width: 30px;
+            }
+
+            &:hover {
+                cursor: pointer;
+                animation: wiggle 0.5s ease;
+            }
+        }
+    }
+}
