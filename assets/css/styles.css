@@ -1459,6 +1459,12 @@ body {
   }
 }
 
+@media screen and (max-width: 426px) {
+  .c-nav {
+    display: none;
+  }
+}
+
 .c-nav__block {
   position: relative;
 }
