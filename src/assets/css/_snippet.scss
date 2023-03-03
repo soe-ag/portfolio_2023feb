@@ -7,6 +7,7 @@
 
     --white:#fff;
     --black:#222831;
+    --dark: #323232;
 
     --lightblack:#393E46;
     --yellow:#FFD369;
@@ -14,14 +15,6 @@
 
     --light1: #DBE2EF;
     --light2: #C9D6DF;
-    --lightback: #F9F7F7;
-    --lightfont: #112D4E;
-
-    --dark1: #393E46;
-    --dark2: #00ADB5;
-    --darkback: #222831;
-    --darkfont: #EEEEEE;
-
 }
 
 @mixin imgDefault {
@@ -84,7 +77,7 @@
 }
 
 @mixin tp {
-    @media screen and (max-width:820px) {
+    @media screen and (min-width:427px) and (max-width:820px) {
         @content;
     }
 }

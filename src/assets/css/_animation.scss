@@ -199,20 +199,21 @@
 
 .swiper-button-next,
 .swiper-button-prev {
-    --swiper-navigation-color: var(--lightblue); //ここに変更する色を指定
+    --swiper-navigation-color: var(--yellow) !important; //ここに変更する色を指定
     @include sp{
         --swiper-navigation-size: 20px;
     }
 }
 
 span.swiper-pagination-bullet.swiper-pagination-bullet-active {
-    background-color: var(--lightblue);
+    background-color: var(--yellow);
 
 }
 
 /* target all bullets */
 span.swiper-pagination-bullet {
-    background-color: brown;
+    background-color: var(--dark);
+    border: 1px solid rgb(230, 230, 230);
     @include sp{
         width: var(--swiper-pagination-bullet-width, var(--swiper-pagination-bullet-size, 4px));
         height: var(--swiper-pagination-bullet-height, var(--swiper-pagination-bullet-size, 4px));

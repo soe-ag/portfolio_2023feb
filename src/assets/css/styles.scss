@@ -7,8 +7,9 @@
 //--------------------------------------------------------
 * {
     box-sizing: border-box;
-    font-family: 'Raleway', sans-serif;
+    font-family: 'Comfortaa', cursive;
     letter-spacing: 1px;
+    color: var(--dark)
 }
 
 img {
@@ -22,10 +23,12 @@ body {
     // background-color: var(--white);
     background-image: url(../img/pc/blurry-gradient-haikei.png);
     background-size: cover;
+    background-color: var(--dark);
+
 }
 
 .darkmode{
-    background-color:var(--darkback);
+    background-color:var(--black);
     color:var(--white);
 }
 
@@ -80,6 +83,9 @@ body {
         img{
             width: 30px;
             animation: wiggle 2s infinite alternate-reverse;
+            @include sp{
+                width: 25px;
+            }
         }
         
     }
@@ -118,15 +124,16 @@ body {
     &__link {
         display: inline-block;
         position: relative;
-        @include text(22px, 600, normal);
+        @include text(22px, 1000, normal);
         cursor: pointer;
         padding: 10px 14px;
-        color: var(--black);
+        // color: var(--black);
+        transition: all 0.1s ease 0s;
     }
 
     &__link:hover {
-        transition: color 0.4s ease 0s;
         color: var(--yellow);
+        transform: scale(1.1);
     }
 }
 

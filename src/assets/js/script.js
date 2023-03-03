@@ -46,12 +46,15 @@ function showPage() {
 
 
 // --for dark mode toggle
-function toggle(){
+function toggle1(){
   const lightToggle = document.getElementById("light");
   const darkToggle = document.getElementById("dark");
-  const all = document.getElementById("body");
+  // const all = document.getElementById("body");
   const navItem = document.getElementsByClassName("c-nav__link");
+  const topAbout = document.getElementById("topAbout");
+  const wholediv = document.getElementById("wholediv");
 
+  const body = document.querySelector("body");
   const top = document.getElementById("top");
   const about = document.getElementById("about");
   const skills = document.getElementById("skills");
@@ -62,32 +65,95 @@ function toggle(){
   if(lightToggle.style.display === "block"){
     darkToggle.style.display = "block";
     lightToggle.style.display ="none";
-    all.classList.add("darkmode")
+    // all.classList.add("darkmode")
     for (let i = 0; i < navItem.length; i++) {
       navItem[i].classList.add("dark")
     }
+    body.style.backgroundImage = "none";
+    top.style.backgroundColor = "var(--dark1)";
+    about.style.backgroundColor = "var(--dark1)";
+    skills.style.backgroundColor = "var(--dark1)";
+    works.style.backgroundColor = "var(--dark1)";
+    contact.style.backgroundColor = "var(--dark1)";
 
-    top.style.backgroundColor = "var(--dark2)";
-    about.style.backgroundColor = "var(--darkback)";
-    skills.style.backgroundColor = "var(--darkback)";
-    works.style.backgroundColor = "var(--darkback)";
-    contact.style.backgroundColor = "var(--dark2)";
+    topAbout.classList.remove("topABout")
+    wholediv.classList.add("dark");
   }
   else{
     lightToggle.style.display = "block";
     darkToggle.style.display = "none";
-    all.classList.remove("darkmode")
+    // all.classList.remove("darkmode")
     for (let i = 0; i < navItem.length; i++) {
       navItem[i].classList.remove("dark");
     }
 
-    top.style.backgroundColor = "var(--yellow)";
-    about.style.backgroundColor = "var(--white)";
-    skills.style.backgroundColor = "var(--white)";
-    works.style.backgroundColor = "var(--white)";
-    contact.style.backgroundColor = "var(--yellow)";
+    top.style.backgroundColor = "none";
+    about.style.backgroundColor = "none";
+    skills.style.backgroundColor = "none";
+    works.style.backgroundColor = "none";
+    contact.style.backgroundColor = "none";
 
+    topAbout.classList.add("topABout");
+    
   }
 }
 
+function toggle(){
+  const lightToggle = document.getElementById("light");
+  const darkToggle = document.getElementById("dark");
+  const body = document.querySelector("body");
+  const font = document.querySelectorAll("div")
+
+  const topAbout = document.getElementById("topAbout");
+  const skillsWorks = document.getElementById("skillsWorks");
+  const worksContact = document.getElementById("worksContact");
+
+  const arrowNext = document.querySelector("swiper-button-next");
+  const arrowPrev = document.querySelector("swiper-button-prev");
+  // const bulletActive = document.getElementsByClassName("swiper-pagination-bullet-active");
+
+  if(lightToggle.style.display === "block"){
+    darkToggle.style.display = "block";
+    lightToggle.style.display = "none";
+
+    for (let i = 0; i < font.length; i++) {
+      font[i].style.color = "var(--white)";
+    }
+
+    body.style.backgroundImage = "none";
+    topAbout.style.backgroundImage = "none";
+    skillsWorks.style.backgroundImage = "none";
+    worksContact.style.backgroundImage = "none";
+
+    // for (let i = 0; i < bullet.length; i++) {
+    //   bullet[i].style.backgroundColor = "var(--white)";
+    // }
+
+    // bulletActive.style.backgroundColor = "var(--yellow)";
+    arrowNext.style.color = "var(--yellow) !important";
+    arrowPrev.style.color = "var(--yellow) !important";
+
+  }
+  else{
+    lightToggle.style.display = "block";
+    darkToggle.style.display = "none";
+
+    for (let i = 0; i < font.length; i++) {
+      font[i].style.color = "var(--dark)";
+    }
+
+    body.style.backgroundImage ="url(assets/img/pc/blurry-gradient-haikei.png)";
+    topAbout.style.backgroundImage = "url(assets/img/pc/stacked-waves-haikei2.svg)";
+    skillsWorks.style.backgroundImage = "url(assets/img/pc/blob-haikei.svg)";
+    worksContact.style.backgroundImage = "url(assets/img/pc/wave-haikeib.svg)";
+
+    // for (let i = 0; i < bullet.length; i++) {
+    //   bullet[i].style.backgroundColor = "var(--dark)";
+    // }
+
+    //     bulletActive.style.backgroundColor = "var(--yellow)";
+
+  }
+
+}
 
