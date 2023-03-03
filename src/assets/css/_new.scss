@@ -2,37 +2,66 @@
 // font-family: 'Klee One',cursive;
 
 // -----------------------------------------0.section---------------------------------------
+#topAbout{
+    background-image: url(../img/pc/stacked-waves-haikei2.svg);
+    background-size: cover;
+    max-width: 98%;
+    margin: 0 auto;
+    border-top-left-radius: 15px;
+    border-top-right-radius: 15px;
+}
+
+#skillsWorks {
+    background-image: url(../img/pc/blob-haikei.svg);
+    background-size: cover;
+    background-position: center;
+    max-width: 98%;
+    margin: 0 auto;
+}
+
+#worksContact{
+    background-image: url(../img/pc/wave-haikeib.svg);
+    background-size: cover;
+    background-position: center;
+    max-width: 98%;
+    margin: 0 auto;
+    border-bottom-left-radius: 15px;
+    border-bottom-right-radius: 15px;
+}
 
 .c-section {
     // margin: 0;
     // height: 600px;
-    position: relative;
-    max-width: 800px;
+    // position: relative;
+    // z-index: 1;
+    max-width: 60%;
     margin: 0 auto;
-    box-shadow: 0 10px 20px 0 rgba(150, 150, 150, 0.37);
-    backdrop-filter: blur(5px);
-    border-left: 1px solid rgba(200, 200, 200, 0.18);
-    border-right: 1px solid rgba(200, 200, 200, 0.18);
+    // box-shadow: 0 10px 20px 0 rgba(150, 150, 150, 0.37);
+    // backdrop-filter: blur(5px);
+    // border-left: 1px solid rgba(200, 200, 200, 0.18);
+    // border-right: 1px solid rgba(200, 200, 200, 0.18);
+    // background:rgba(94, 46, 46, 0.1);
 
-    // @include sp {
-    //     padding: 50px 0;
-    // }
+    @include sp {
+            max-width: 100%;
+    }
 
     &--top {
         // border-top-left-radius: 30px;
         // border-top-right-radius: 30px;
         // margin-top: 60px;
-        border-top: 1px solid rgba(200, 200, 200, 0.18);
+        // border-top: 1px solid rgba(200, 200, 200, 0.18);
         height: 550px;
+        // background-size: cover;
+        // transform: rotate(90deg);
         @include sp{
-            height: 380px;
+            height: 280px;
         }
     }
 
     &--social {
-        height: 240px;
-        // border-bottom-left-radius: 30px;
-        // border-bottom-right-radius: 30px;
+        height: 300px;
+        padding-top: 40px;
         border-bottom: 1px solid rgba(200, 200, 200, 0.18);
         @include sp{
             height: 180px;
@@ -91,9 +120,10 @@
     &__block {
         @include adjustment(800px);
         // border: 1px solid black;
-        margin-top: 80px;
+        // margin-top: 80px;
+        padding-top: 80px;
         @include sp{
-            margin-top: 0;
+            padding-top: 0;
         }
 
     }
@@ -127,6 +157,10 @@
     &__head2 {
         position: relative;
         top: 235px;
+
+        @include sp{
+            top: 175px;
+        }
 
         &--small--typed-out2 {
             @include text(22px, 600, 25px);
@@ -340,6 +374,7 @@
 // -----------------------------------5. social -------------------------
 .p-social {
     text-align: center;
+
 
     &__head {
         @include text(22px, 600, 20px);

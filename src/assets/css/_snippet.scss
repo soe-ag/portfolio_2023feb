@@ -1,18 +1,27 @@
 :root {
-    --orange: #ff6b35;
-    --peach: #f7c59f;
-    --beige: #efefd0;
-    --darkblue: #004e89;
-    --lightblue: #1a659e;
-
-    --black:#222831;
-    --lightblack:#393E46;
-    --yellow:#FFD369;
-    --gray:#EEEEEE;
-
-    --gray2:#C4B6B6;
+    // --orange: #ff6b35;
+    // --peach: #f7c59f;
+    // --beige: #efefd0;
+    // --darkblue: #004e89;
+    // --lightblue: #1a659e;
 
     --white:#fff;
+    --black:#222831;
+
+    --lightblack:#393E46;
+    --yellow:#FFD369;
+    --yellow2:#FFE9B5;
+
+    --light1: #DBE2EF;
+    --light2: #C9D6DF;
+    --lightback: #F9F7F7;
+    --lightfont: #112D4E;
+
+    --dark1: #393E46;
+    --dark2: #00ADB5;
+    --darkback: #222831;
+    --darkfont: #EEEEEE;
+
 }
 
 @mixin imgDefault {

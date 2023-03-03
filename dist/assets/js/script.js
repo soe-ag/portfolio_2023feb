@@ -58,7 +58,7 @@ function toggle(){
   const works = document.getElementById("works");
   const contact = document.getElementById("contact");
 
-  console.log(navItem);
+  // console.log(navItem);
   if(lightToggle.style.display === "block"){
     darkToggle.style.display = "block";
     lightToggle.style.display ="none";
@@ -67,11 +67,11 @@ function toggle(){
       navItem[i].classList.add("dark")
     }
 
-    top.style.backgroundColor = "var(--white)";
-    about.style.backgroundColor = "var(--lightblack)";
-    skills.style.backgroundColor = "var(--black)";
-    works.style.backgroundColor = "var(--gray2)";
-    contact.style.backgroundColor = "var(--yellow)";
+    top.style.backgroundColor = "var(--dark2)";
+    about.style.backgroundColor = "var(--darkback)";
+    skills.style.backgroundColor = "var(--darkback)";
+    works.style.backgroundColor = "var(--darkback)";
+    contact.style.backgroundColor = "var(--dark2)";
   }
   else{
     lightToggle.style.display = "block";
@@ -80,6 +80,12 @@ function toggle(){
     for (let i = 0; i < navItem.length; i++) {
       navItem[i].classList.remove("dark");
     }
+
+    top.style.backgroundColor = "var(--yellow)";
+    about.style.backgroundColor = "var(--white)";
+    skills.style.backgroundColor = "var(--white)";
+    works.style.backgroundColor = "var(--white)";
+    contact.style.backgroundColor = "var(--yellow)";
 
   }
 }

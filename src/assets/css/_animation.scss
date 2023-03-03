@@ -157,11 +157,11 @@
     &-img{
         padding: 25px;
         &:hover {
-                cursor: pointer;
+            cursor: pointer;
         }
 
         @include sp {
-                padding: 0px
+            padding: 0px
         }
         
     }
@@ -184,8 +184,10 @@
             margin-left: 10px;
             top: 5px;
             position: relative;
+            transition: all 0.2s ease-in-out;
             &:hover {
-                    cursor: pointer;
+                cursor: pointer;
+                transform: scale(1.5)
             }
 
             @include sp{

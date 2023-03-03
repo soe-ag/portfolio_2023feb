@@ -134,44 +134,72 @@ table {
 }
 
 :root {
-  --orange: #ff6b35;
-  --peach: #f7c59f;
-  --beige: #efefd0;
-  --darkblue: #004e89;
-  --lightblue: #1a659e;
+  --white:#fff;
   --black:#222831;
   --lightblack:#393E46;
   --yellow:#FFD369;
-  --gray:#EEEEEE;
-  --gray2:#C4B6B6;
-  --white:#fff;
+  --yellow2:#FFE9B5;
+  --light1: #DBE2EF;
+  --light2: #C9D6DF;
+  --lightback: #F9F7F7;
+  --lightfont: #112D4E;
+  --dark1: #393E46;
+  --dark2: #00ADB5;
+  --darkback: #222831;
+  --darkfont: #EEEEEE;
+}
+
+#topAbout {
+  background-image: url(../img/pc/stacked-waves-haikei2.svg);
+  background-size: cover;
+  max-width: 98%;
+  margin: 0 auto;
+  border-top-left-radius: 15px;
+  border-top-right-radius: 15px;
+}
+
+#skillsWorks {
+  background-image: url(../img/pc/blob-haikei.svg);
+  background-size: cover;
+  background-position: center;
+  max-width: 98%;
+  margin: 0 auto;
+}
+
+#worksContact {
+  background-image: url(../img/pc/wave-haikeib.svg);
+  background-size: cover;
+  background-position: center;
+  max-width: 98%;
+  margin: 0 auto;
+  border-bottom-left-radius: 15px;
+  border-bottom-right-radius: 15px;
 }
 
 .c-section {
-  position: relative;
-  max-width: 800px;
+  max-width: 60%;
   margin: 0 auto;
-  -webkit-box-shadow: 0 10px 20px 0 rgba(150, 150, 150, 0.37);
-          box-shadow: 0 10px 20px 0 rgba(150, 150, 150, 0.37);
-  -webkit-backdrop-filter: blur(5px);
-          backdrop-filter: blur(5px);
-  border-left: 1px solid rgba(200, 200, 200, 0.18);
-  border-right: 1px solid rgba(200, 200, 200, 0.18);
+}
+
+@media screen and (max-width: 426px) {
+  .c-section {
+    max-width: 100%;
+  }
 }
 
 .c-section--top {
-  border-top: 1px solid rgba(200, 200, 200, 0.18);
   height: 550px;
 }
 
 @media screen and (max-width: 426px) {
   .c-section--top {
-    height: 380px;
+    height: 280px;
   }
 }
 
 .c-section--social {
-  height: 240px;
+  height: 300px;
+  padding-top: 40px;
   border-bottom: 1px solid rgba(200, 200, 200, 0.18);
 }
 
@@ -238,12 +266,12 @@ table {
   max-width: 800px;
   margin: 0 auto 0;
   padding: 0 0 0;
-  margin-top: 80px;
+  padding-top: 80px;
 }
 
 @media screen and (max-width: 426px) {
   .p-top__block {
-    margin-top: 0;
+    padding-top: 0;
   }
 }
 
@@ -269,6 +297,12 @@ table {
 .p-top__head2 {
   position: relative;
   top: 235px;
+}
+
+@media screen and (max-width: 426px) {
+  .p-top__head2 {
+    top: 175px;
+  }
 }
 
 .p-top__head2--small--typed-out2 {
@@ -771,10 +805,14 @@ table {
   margin-left: 10px;
   top: 5px;
   position: relative;
+  -webkit-transition: all 0.2s ease-in-out;
+  transition: all 0.2s ease-in-out;
 }
 
 .slide-text-img:hover {
   cursor: pointer;
+  -webkit-transform: scale(1.5);
+          transform: scale(1.5);
 }
 
 @media screen and (max-width: 426px) {
@@ -1320,12 +1358,12 @@ img {
 }
 
 body {
-  background-color: var(--white);
+  background-image: url(../img/pc/blurry-gradient-haikei.png);
   background-size: cover;
 }
 
 .darkmode {
-  background-color: var(--black);
+  background-color: var(--darkback);
   color: var(--white);
 }
 
@@ -1337,19 +1375,16 @@ body {
   display: none;
 }
 
+.l-main {
+  position: relative;
+}
+
 .c-header {
   position: relative;
   top: 0;
   left: 0;
   width: 100%;
-  height: 65px;
   z-index: 100;
-}
-
-@media screen and (max-width: 426px) {
-  .c-header {
-    height: 40px;
-  }
 }
 
 .c-header__logo {
@@ -1429,12 +1464,13 @@ body {
   line-height: normal;
   cursor: pointer;
   padding: 10px 14px;
+  color: var(--black);
 }
 
 .c-nav__link:hover {
   -webkit-transition: color 0.4s ease 0s;
   transition: color 0.4s ease 0s;
-  color: #399BD2;
+  color: var(--yellow);
 }
 
 .c-bkg {
@@ -1459,3 +1495,5 @@ body {
   font-family: 'Montserrat', sans-serif;
   text-align: center;
 }
+
+/*# sourceMappingURL=styles.css.map */
