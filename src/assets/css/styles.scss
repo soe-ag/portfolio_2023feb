@@ -105,6 +105,10 @@ body {
         display: none;
     }
 
+        @include sp {
+            display: none;
+        }
+
     position: fixed;
     top: 0;
     right: 0;
