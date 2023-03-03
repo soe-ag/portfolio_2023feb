@@ -53,7 +53,7 @@
 <body id="body" onload="loading()">
   <div id="loader">loading...</div>
   <div class="l-wrapper" id="wholediv">
-    <header class="c-header" id="top">
+    <header class="c-header" id="header">
       <div class="c-header__block">
         <div class="c-header__logo">Portfolio</div>
         <div class="c-header__mode" onclick="toggle()">
@@ -79,76 +79,79 @@
 
     <main class="l-main">
       <!-- <div class="c-section--margin60px"></div> -->
-      <!-- --------------------------------------------1.top--------------------------------------------- -->
-      <div id="top" class="c-section  c-section--top fadein" style="background-color:rgba(183, 196, 207, 0.6); ">
-        <div class="p-top ">
-          <!-- <div class="p-top__bkg"> -->
-          <!-- <div class="p-top__bkg--img">
-              <img src="./assets/img/pc/wallpaper.jpg" alt="">
-            </div> -->
-          <!-- </div> -->
-          <div class="c-section__main ">
-            <!-- <div class="c-section__head">
-              <div class="c-section__title"></div>
-            </div> -->
-            <div class="c-section__body">
-              <div class="p-top__block">
-                <div class="p-top__head">
-                  <div class="p-top__head--big">
-                    <div class="p-top__head--big--typed-out" id="typeout1"></div>
-                  </div>
-                </div>
+      <div id="topAbout">
+        <!-- --------------------------------------------1.top--------------------------------------------- -->
+        <div id="top" class="c-section  c-section--top fadein">
 
-                <div class="p-top__head2">
-                  <div class="p-top__head2--small">
-                    <div class="p-top__head2--small--typed-out2" id="typeout2"></div>
+          <div class="p-top ">
+            <!-- <div class="p-top__bkg"> -->
+            <!-- <div class="p-top__bkg--img">
+                <img src="./assets/img/pc/wallpaper.jpg" alt="">
+              </div> -->
+            <!-- </div> -->
+            <div class="c-section__main ">
+              <!-- <div class="c-section__head">
+                <div class="c-section__title"></div>
+              </div> -->
+              <div class="c-section__body">
+                <div class="p-top__block">
+                  <div class="p-top__head">
+                    <div class="p-top__head--big">
+                      <div class="p-top__head--big--typed-out" id="typeout1"></div>
+                    </div>
                   </div>
-                </div>
 
-                <div class="p-top__body">
-                  <ul class="p-top__list1" id="iconleft">
-                    <li class="p-top__list1--item"><img src="./assets/img/pc/hero/icons8-camera-96.png" /></li>
-                    <li class="p-top__list1--item"><img src="./assets/img/pc/hero/icons8-airpods-pro-max-96.png" /></li>
-                    <li class="p-top__list2--item"><img src="./assets/img/pc/hero/icons8-source-code-96.png" /></li>
-                    <li class="p-top__list2--item"><img src="./assets/img/pc/hero/icons8-imac-96.png" /></li>
-                    <li class="p-top__list2--item"><img src="./assets/img/pc/hero/icons8-engineering-96.png" /></li>
-                  </ul>
-                  <ul class="p-top__list2" id="iconright">
-                    <li class="p-top__list1--item"><img src="./assets/img/pc/hero//icons8-guitar-96.png" /></li>
-                    <li class="p-top__list2--item"><img src="./assets/img/pc/hero/icons8-smartphone-94.png" /></li>
-                    <li class="p-top__list2--item"><img src="./assets/img/pc/hero/icons8-stadium-96.png" /></li>
-                    <li class="p-top__list1--item"><img src="./assets/img/pc/hero/icons8-musical-notes-96.png" /></li>
-                    <li class="p-top__list1--item"><img src="./assets/img/pc/hero/icons8-bitcoin-96.png" /></li>
-                    
-                  </ul>
+                  <div class="p-top__head2">
+                    <div class="p-top__head2--small">
+                      <div class="p-top__head2--small--typed-out2" id="typeout2"></div>
+                    </div>
+                  </div>
+
+                  <div class="p-top__body">
+                    <ul class="p-top__list1" id="iconleft">
+                      <li class="p-top__list1--item"><img src="./assets/img/pc/hero/icons8-camera-96.png" /></li>
+                      <li class="p-top__list1--item"><img src="./assets/img/pc/hero/icons8-airpods-pro-max-96.png" /></li>
+                      <li class="p-top__list2--item"><img src="./assets/img/pc/hero/icons8-source-code-96.png" /></li>
+                      <li class="p-top__list2--item"><img src="./assets/img/pc/hero/icons8-imac-96.png" /></li>
+                      <li class="p-top__list2--item"><img src="./assets/img/pc/hero/icons8-engineering-96.png" /></li>
+                    </ul>
+                    <ul class="p-top__list2" id="iconright">
+                      <li class="p-top__list1--item"><img src="./assets/img/pc/hero//icons8-guitar-96.png" /></li>
+                      <li class="p-top__list2--item"><img src="./assets/img/pc/hero/icons8-smartphone-94.png" /></li>
+                      <li class="p-top__list2--item"><img src="./assets/img/pc/hero/icons8-stadium-96.png" /></li>
+                      <li class="p-top__list1--item"><img src="./assets/img/pc/hero/icons8-musical-notes-96.png" /></li>
+                      <li class="p-top__list1--item"><img src="./assets/img/pc/hero/icons8-bitcoin-96.png" /></li>
+                      
+                    </ul>
+                  </div>
                 </div>
               </div>
             </div>
           </div>
         </div>
-      </div>
 
 
-      <!-- --------------------------------------------2.about--------------------------------------------- -->
-      <div id="about" class="c-section fadein" style="background-color: rgba(191, 195, 199, 0.6);">
-        <div class="p-about" >
-          <div class="c-section__main">
-            <div class="c-section__head">
-              <div class="c-section__title">ABOUT
-                <div class="c-section__title--underline"></div>
+        <!-- --------------------------------------------2.about--------------------------------------------- -->
+        <div id="about" class="c-section fadein" >
+          <div class="p-about" >
+            <div class="c-section__main">
+              <div class="c-section__head">
+                <div class="c-section__title">ABOUT
+                  <div class="c-section__title--underline"></div>
+                </div>
               </div>
-            </div>
-            <div class="c-section__body">
-           
-              <div class="p-about__body">
-                Junior Frontend Engineer, who is characterized by a strong
-                attention to detail, coupled with a willingness to learn and
-                adapt to new technologies and trends. <br /><br />
-                Diversed background with a Master's degree in 
-                Engineering, who can bring strong analytical skills and a
-                creative problem-solving approach to workplace.
-                <br /><br />
-                Download <a href="https://drive.google.com/uc?export=download&id=1v7OAmVWwQxXpk1ck88oumWTJfkkfjYLE" style="text-decoration: underline;">RESUME</a>
+              <div class="c-section__body">
+            
+                <div class="p-about__body">
+                  Junior Frontend Engineer, who is characterized by a strong
+                  attention to detail, coupled with a willingness to learn and
+                  adapt to new technologies and trends. <br /><br />
+                  Diversed background with a Master's degree in 
+                  Engineering, who can bring strong analytical skills and a
+                  creative problem-solving approach to workplace.
+                  <br /><br />
+                  Download <a href="https://drive.google.com/uc?export=download&id=1v7OAmVWwQxXpk1ck88oumWTJfkkfjYLE" style="text-decoration: underline;">RESUME</a>
+                </div>
               </div>
             </div>
           </div>
@@ -156,212 +159,217 @@
       </div>
 
       <!-- --------------------------------------------3.skills--------------------------------------------- -->
-      <div id="skills" class="c-section fadein" style="background-color: rgba(199, 194, 191, 0.6);">
-        <div class="p-skills">
-          <div class="c-section__main">
-            <div class="c-section__head">
-              <div class="c-section__title">SKILLS
-                <div class="c-section__title--underline"></div>
-              </div>
-            </div>
-            <div class="c-section__body">
-              <div class="p-skills__block">
-                <div class="p-skills__box">
-                  <div class="p-skills__head">
-                    Experience with
-                  </div>
-                  <ul class="p-skills__body">
-                    <li class="p-skills__body--item"><img src="https://img.icons8.com/color/50/000000/html-5--v1.png" />
-                      <div class="p-skills__body--label">HTML</div>
-                    </li>
-                    <li class="p-skills__body--item"><img src="https://img.icons8.com/color/50/000000/css3.png" />
-                      <div class="p-skills__body--label">CSS</div>
-                    </li>
-                    <li class="p-skills__body--item"><img src="https://img.icons8.com/color/50/000000/javascript--v1.png" />
-                      <div class="p-skills__body--label">JS</div>
-                    </li>
-                    <li class="p-skills__body--item"><img src="https://img.icons8.com/color/50/000000/sass.png" />
-                      <div class="p-skills__body--label">SASS</div>
-                    </li>
-                    <li class="p-skills__body--item"><img src="https://img.icons8.com/color/45/000000/bootstrap.png" />
-                      <div class="p-skills__body--label">Bootstrap</div>
-                    </li>
-                    <li class="p-skills__body--item"><img src="https://img.icons8.com/ios/45/000000/jquery.png" />
-                      <div class="p-skills__body--label">jQuery</div>
-                    </li>
-                    <li class="p-skills__body--item"><img src="https://img.icons8.com/color/45/null/figma--v1.png" />
-                      <div class="p-skills__body--label">Figma</div>
-                    </li>
-                    
-                    
-                  </ul>
+      <div id="skillsWorks">
+        <div id="skills" class="c-section fadein">
+          <div class="p-skills">
+            <div class="c-section__main">
+              <div class="c-section__head">
+                <div class="c-section__title">SKILLS
+                  <div class="c-section__title--underline"></div>
                 </div>
-                <div class="p-skills__box">
-                  <div class="p-skills__head">
-                    Some experience with
-                  </div>
-                  <ul class="p-skills__body">
-                    <li class="p-skills__body--item"><img src="https://img.icons8.com/office/45/000000/react.png" />
-                      <div class="p-skills__body--label">React</div>
-                    </li>
-                    <li class="p-skills__body--item"><img src="https://img.icons8.com/color/45/null/redux.png" />
-                      <div class="p-skills__body--label">Redux</div>
-                    </li>
-                    <li class="p-skills__body--item"><img src="https://img.icons8.com/color/45/null/typescript.png" />
-                      <div class="p-skills__body--label">TS</div>
-                    </li>
-                    <li class="p-skills__body--item"><img
-                      src="https://img.icons8.com/external-tal-revivo-color-tal-revivo/43/null/external-jest-can-collect-code-coverage-information-from-entire-projects-logo-color-tal-revivo.png" />
-                      <div class="p-skills__body--label">Jest</div>
-                    </li>
-                    <li class="p-skills__body--item"><img src="https://img.icons8.com/color/50/000000/nodejs.png" />
-                      <div class="p-skills__body--label">Node</div>
-                    </li>
-                    <!-- <li class="p-skills__body--item"><img src="https://img.icons8.com/color/50/000000/git.png" />
-                      <div class="p-skills__body--label">Git</div>
-                    </li> -->
-                  </ul>
-                </div>
-
               </div>
-            </div>
-          </div>
-        </div>
-      </div>
-
-      <!-- --------------------------------------------4.works--------------------------------------------- -->
-      <div id="works" class="c-section fadein" style="background-color: rgba(207, 193, 182, 0.6);">
-        <div class="p-project">
-          <div class="c-section__main">
-            <div class="c-section__head">
-              <div class="c-section__title">WORKS
-                <div class="c-section__title--underline"></div>
-              </div>
-
-            </div>
-            <div class="c-section__body">
-              <div class="p-project__block">
-                <div class="p-project__head">
-                  <!-- <div class="p-project__head--title">for all slide text</div> -->
-                </div>
-                <div class="swiper mySwiper">
-                  <div class="swiper-wrapper">
-                    <div class="swiper-slide">
-                      <div class="slide">
-                        <div class="slide-img">
-                          <a href="https://lp.bo-tha.com/official_character_gallery/202212/" target="_blank">
-                            <img src="./assets/img/pc/workbothalist.jpg"></img>
-                          </a>
-                        </div>
-                        <div class="slide-text">Botha Character Competition Gallery
-                          <a href="https://github.com/soe-ag/botha_compe_artlist" target="_blank">
-                            <img class="slide-text-img" src="https://img.icons8.com/glyph-neue/42/null/github.png" />
-                          </a>
-                        </div>
-                      </div>
+              <div class="c-section__body">
+                <div class="p-skills__block">
+                  <div class="p-skills__box">
+                    <div class="p-skills__head">
+                      Experience with
                     </div>
-
-                    <div class="swiper-slide">
-                      <div class="slide">
-                        <div class="slide-img">
-                          <a href="https://egodivalinkportal.netlify.app" target="_blank">
-                            <img src="./assets/img/pc/workegolink.jpg"></img>
-                          </a>
-                        </div>
-                        <div class="slide-text">Egodiva Link Portal
-                          <a href="https://github.com/soe-ag/egodiva_links" target="_blank">
-                            <img class="slide-text-img" src="https://img.icons8.com/glyph-neue/42/null/github.png" />
-                          </a>
-                        </div>
-                      </div>
-                    </div>
-
-                    <div class="swiper-slide">
-                      <div class="slide">
-                        <div class="slide-img">
-                          <a href="https://soe-ag.github.io/botha_about_clone/" target="_blank">
-                            <img src="./assets/img/pc/workbotha.jpg"></img>
-                          </a>
-                        </div>
-                        <div class="slide-text">About Botha Clone
-                          <a href="https://github.com/soe-ag/botha_about_clone" target="_blank">
-                            <img class="slide-text-img" src="https://img.icons8.com/glyph-neue/42/null/github.png" />
-                          </a>
-                        </div>
-                      </div>
-                    </div>
-
-                    <div class="swiper-slide">
-                      <div class="slide">
-                        <div class="slide-img">
-                          <a href="https://soe-ag.github.io/botha_compete_clone/" target="_blank">
-                            <img src="./assets/img/pc/workbothacompe.jpg"></img>
-                          </a>
-                        </div>
-                        <div class="slide-text">Botha Competition Clone
-                          <a href="https://github.com/soe-ag/botha_compete_clone" target="_blank">
-                            <img class="slide-text-img" src="https://img.icons8.com/glyph-neue/42/null/github.png" />
-                          </a>
-                        </div>
-                      </div>
-                    </div>
-
-                    <div class="swiper-slide">
-                      <div class="slide">
-                        <div class="slide-img">
-                          <a href="https://soe-ag.github.io/egodiva_marketing_clone/" target="_blank">
-                            <img src="./assets/img/pc/workegomarket.jpg"></img>
-                          </a>
-                        </div>
-                        <div class="slide-text">Egodiva Marketing Clone
-                          <a href="https://github.com/soe-ag/egodiva_marketing_clone" target="_blank">
-                            <img class="slide-text-img" src="https://img.icons8.com/glyph-neue/42/null/github.png" />
-                          </a>
-                        </div>
-                      </div>
-                    </div>
-                 
-
+                    <ul class="p-skills__body">
+                      <li class="p-skills__body--item"><img src="https://img.icons8.com/color/50/000000/html-5--v1.png" />
+                        <div class="p-skills__body--label">HTML</div>
+                      </li>
+                      <li class="p-skills__body--item"><img src="https://img.icons8.com/color/50/000000/css3.png" />
+                        <div class="p-skills__body--label">CSS</div>
+                      </li>
+                      <li class="p-skills__body--item"><img src="https://img.icons8.com/color/50/000000/javascript--v1.png" />
+                        <div class="p-skills__body--label">JS</div>
+                      </li>
+                      <li class="p-skills__body--item"><img src="https://img.icons8.com/color/50/000000/sass.png" />
+                        <div class="p-skills__body--label">SASS</div>
+                      </li>
+                      <li class="p-skills__body--item"><img src="https://img.icons8.com/color/45/000000/bootstrap.png" />
+                        <div class="p-skills__body--label">Bootstrap</div>
+                      </li>
+                      <li class="p-skills__body--item"><img src="https://img.icons8.com/ios/45/000000/jquery.png" />
+                        <div class="p-skills__body--label">jQuery</div>
+                      </li>
+                      <li class="p-skills__body--item"><img src="https://img.icons8.com/color/45/null/figma--v1.png" />
+                        <div class="p-skills__body--label">Figma</div>
+                      </li>
+                      
+                      
+                    </ul>
                   </div>
-                  <div class="swiper-button-next"></div>
-                  <div class="swiper-button-prev"></div>
-                  <div class="swiper-pagination"></div>
+                  <div class="p-skills__box">
+                    <div class="p-skills__head">
+                      Some experience with
+                    </div>
+                    <ul class="p-skills__body">
+                      <li class="p-skills__body--item"><img src="https://img.icons8.com/office/45/000000/react.png" />
+                        <div class="p-skills__body--label">React</div>
+                      </li>
+                      <li class="p-skills__body--item"><img src="https://img.icons8.com/color/45/null/redux.png" />
+                        <div class="p-skills__body--label">Redux</div>
+                      </li>
+                      <li class="p-skills__body--item"><img src="https://img.icons8.com/color/45/null/typescript.png" />
+                        <div class="p-skills__body--label">TS</div>
+                      </li>
+                      <li class="p-skills__body--item"><img
+                        src="https://img.icons8.com/external-tal-revivo-color-tal-revivo/43/null/external-jest-can-collect-code-coverage-information-from-entire-projects-logo-color-tal-revivo.png" />
+                        <div class="p-skills__body--label">Jest</div>
+                      </li>
+                      <li class="p-skills__body--item"><img src="https://img.icons8.com/color/50/000000/nodejs.png" />
+                        <div class="p-skills__body--label">Node</div>
+                      </li>
+                      <!-- <li class="p-skills__body--item"><img src="https://img.icons8.com/color/50/000000/git.png" />
+                        <div class="p-skills__body--label">Git</div>
+                      </li> -->
+                    </ul>
+                  </div>
+
                 </div>
               </div>
             </div>
           </div>
         </div>
       </div>
+        <!-- --------------------------------------------4.works--------------------------------------------- -->
+      <div id="worksContact">
+        <div id="works" class="c-section fadein" style="background-color:var(--white)">
+          <div class="p-project">
+            <div class="c-section__main">
+              <div class="c-section__head">
+                <div class="c-section__title">WORKS
+                  <div class="c-section__title--underline"></div>
+                </div>
+
+              </div>
+              <div class="c-section__body">
+                <div class="p-project__block">
+                  <div class="p-project__head">
+                    <!-- <div class="p-project__head--title">for all slide text</div> -->
+                  </div>
+                  <div class="swiper mySwiper">
+                    <div class="swiper-wrapper">
+                      <div class="swiper-slide">
+                        <div class="slide">
+                          <div class="slide-img">
+                            <a href="https://lp.bo-tha.com/official_character_gallery/202212/" target="_blank">
+                              <img src="./assets/img/pc/workbothalist.jpg"></img>
+                            </a>
+                          </div>
+                          <div class="slide-text">Botha Character Competition Gallery
+                            <a href="https://github.com/soe-ag/botha_compe_artlist" target="_blank">
+                              <img class="slide-text-img" src="https://img.icons8.com/glyph-neue/42/null/github.png" />
+                            </a>
+                          </div>
+                        </div>
+                      </div>
+
+                      <div class="swiper-slide">
+                        <div class="slide">
+                          <div class="slide-img">
+                            <a href="https://egodivalinkportal.netlify.app" target="_blank">
+                              <img src="./assets/img/pc/workegolink.jpg"></img>
+                            </a>
+                          </div>
+                          <div class="slide-text">Egodiva Link Portal
+                            <a href="https://github.com/soe-ag/egodiva_links" target="_blank">
+                              <img class="slide-text-img" src="https://img.icons8.com/glyph-neue/42/null/github.png" />
+                            </a>
+                          </div>
+                        </div>
+                      </div>
+
+                      <div class="swiper-slide">
+                        <div class="slide">
+                          <div class="slide-img">
+                            <a href="https://soe-ag.github.io/botha_about_clone/" target="_blank">
+                              <img src="./assets/img/pc/workbotha.jpg"></img>
+                            </a>
+                          </div>
+                          <div class="slide-text">About Botha Clone
+                            <a href="https://github.com/soe-ag/botha_about_clone" target="_blank">
+                              <img class="slide-text-img" src="https://img.icons8.com/glyph-neue/42/null/github.png" />
+                            </a>
+                          </div>
+                        </div>
+                      </div>
+
+                      <div class="swiper-slide">
+                        <div class="slide">
+                          <div class="slide-img">
+                            <a href="https://soe-ag.github.io/botha_compete_clone/" target="_blank">
+                              <img src="./assets/img/pc/workbothacompe.jpg"></img>
+                            </a>
+                          </div>
+                          <div class="slide-text">Botha Competition Clone
+                            <a href="https://github.com/soe-ag/botha_compete_clone" target="_blank">
+                              <img class="slide-text-img" src="https://img.icons8.com/glyph-neue/42/null/github.png" />
+                            </a>
+                          </div>
+                        </div>
+                      </div>
+
+                      <div class="swiper-slide">
+                        <div class="slide">
+                          <div class="slide-img">
+                            <a href="https://soe-ag.github.io/egodiva_marketing_clone/" target="_blank">
+                              <img src="./assets/img/pc/workegomarket.jpg"></img>
+                            </a>
+                          </div>
+                          <div class="slide-text">Egodiva Marketing Clone
+                            <a href="https://github.com/soe-ag/egodiva_marketing_clone" target="_blank">
+                              <img class="slide-text-img" src="https://img.icons8.com/glyph-neue/42/null/github.png" />
+                            </a>
+                          </div>
+                        </div>
+                      </div>
+                  
+
+                    </div>
+                    <div class="swiper-button-next"></div>
+                    <div class="swiper-button-prev"></div>
+                    <div class="swiper-pagination"></div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      
 
       <!-- --------------------------------------------5.contact--------------------------------------------- -->
-      <div id="contact" class="c-section c-section--social" style="background-color: rgba(215, 192, 174, 0.6);">
-        <div class="p-social">
-          <div class="c-section__main">
-            <div class="c-section__head">
-              <div class="c-section__title">CONTACT
-                <div class="c-section__title--underline"></div>
+      
+        <div id="contact" class="c-section c-section--social">
+          <div class="p-social">
+            <div class="c-section__main">
+              <div class="c-section__head">
+                <div class="c-section__title">CONTACT
+                  <div class="c-section__title--underline"></div>
+                </div>
               </div>
-            </div>
-            <div class="c-section__body">
-              <div class="p-social__block">
-                <!-- <div class="p-social__head">
-                </div> -->
-                <div class="p-social__body">
-                  <div class="p-social__body--item"><a href="mailto: soeag.m@gmail.com">
-                    <img src="https://img.icons8.com/fluency/42/000000/gmail.png" /></a>
-                  </div>
-                  <div class="p-social__body--item"><a href="https://www.instagram.com/soeaung_14/" target="_blank">
-                    <img src="https://img.icons8.com/fluency/42/000000/instagram-new.png" /></a>
-                  </div>
-                  <div class="p-social__body--item"><a href="https://github.com/soe-ag" target="_blank">
-                    <img src="https://img.icons8.com/glyph-neue/42/null/github.png" /></a>
-                  </div>
-                  
-                  <!-- <div class="p-social__body--item"><img src="https://img.icons8.com/fluency/42/000000/twitter.png" />
+              <div class="c-section__body">
+                <div class="p-social__block">
+                  <!-- <div class="p-social__head">
                   </div> -->
-                  <!-- <div class="p-social__body--item"><img
-                      src="https://img.icons8.com/external-justicon-lineal-color-justicon/45/000000/external-twitter-social-media-justicon-lineal-color-justicon.png" />
-                  </div> -->
+                  <div class="p-social__body">
+                    <div class="p-social__body--item"><a href="mailto: soeag.m@gmail.com">
+                      <img src="https://img.icons8.com/fluency/42/000000/gmail.png" /></a>
+                    </div>
+                    <div class="p-social__body--item"><a href="https://www.instagram.com/soeaung_14/" target="_blank">
+                      <img src="https://img.icons8.com/fluency/42/000000/instagram-new.png" /></a>
+                    </div>
+                    <div class="p-social__body--item"><a href="https://github.com/soe-ag" target="_blank">
+                      <img src="https://img.icons8.com/glyph-neue/42/null/github.png" /></a>
+                    </div>
+                    
+                    <!-- <div class="p-social__body--item"><img src="https://img.icons8.com/fluency/42/000000/twitter.png" />
+                    </div> -->
+                    <!-- <div class="p-social__body--item"><img
+                        src="https://img.icons8.com/external-justicon-lineal-color-justicon/45/000000/external-twitter-social-media-justicon-lineal-color-justicon.png" />
+                    </div> -->
+                  </div>
                 </div>
               </div>
             </div>
