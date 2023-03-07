@@ -37,7 +37,7 @@ body {
 }
 
 .l-wrapper{
-    display: none;
+    // display: none;
 }
 
 .l-main{
@@ -62,6 +62,7 @@ body {
     &__logo {
         display: inline-block;
         padding: 20px;
+        padding-right: 5px;
         @include text(26px, 800, 25px);
 
         @include sp {

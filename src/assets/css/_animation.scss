@@ -199,7 +199,7 @@
 
 .swiper-button-next,
 .swiper-button-prev {
-    --swiper-navigation-color: var(--yellow) !important; //ここに変更する色を指定
+    --swiper-navigation-color: var(--dark) !important; //ここに変更する色を指定
     @include sp{
         --swiper-navigation-size: 20px;
     }

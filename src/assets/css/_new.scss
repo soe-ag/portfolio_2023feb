@@ -17,7 +17,7 @@
     background-size: cover;
     background-position: center;
     max-width: 98%;
-    margin: 0 auto;
+    margin: -1px auto;
 }
 
 #worksContact{
@@ -293,6 +293,7 @@
         a{
             font-weight: 1000;
             letter-spacing: 1.5px;
+            text-decoration: solid underline overline var(--yellow) 3px;
 
             &:hover{
                 cursor: pointer;
