@@ -154,7 +154,7 @@ table {
   background-size: cover;
   background-position: center;
   max-width: 98%;
-  margin: 0 auto;
+  margin: -1px auto;
 }
 
 #worksContact {
@@ -441,6 +441,8 @@ table {
 .p-about__body a {
   font-weight: 1000;
   letter-spacing: 1.5px;
+  -webkit-text-decoration: solid underline overline var(--yellow) 3px;
+          text-decoration: solid underline overline var(--yellow) 3px;
 }
 
 .p-about__body a:hover {
@@ -832,7 +834,7 @@ table {
 
 .swiper-button-next,
 .swiper-button-prev {
-  --swiper-navigation-color: var(--yellow) !important;
+  --swiper-navigation-color: var(--dark) !important;
 }
 
 @media screen and (max-width: 426px) {
@@ -1383,10 +1385,6 @@ body {
   color: var(--white);
 }
 
-.l-wrapper {
-  display: none;
-}
-
 .l-main {
   position: relative;
 }
@@ -1402,6 +1400,7 @@ body {
 .c-header__logo {
   display: inline-block;
   padding: 20px;
+  padding-right: 5px;
   font-size: 26px;
   font-weight: 800;
   line-height: 25px;

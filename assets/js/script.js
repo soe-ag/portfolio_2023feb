@@ -4,7 +4,7 @@ let text1 = "SOE AUNG";
 let text2 = "FRONTEND DEVELOPER";
 let speed = 180;
 
-setTimeout(typeWriter, 3000);
+setTimeout(typeWriter, 500);
 function typeWriter() {
   if (i < text1.length) {
     document.getElementById("typeout1").innerHTML += text1.charAt(i);
@@ -13,7 +13,7 @@ function typeWriter() {
   }
 }
 
-setTimeout(typeWriter2, 5000);
+setTimeout(typeWriter2, 2500);
 function typeWriter2() {
   if (j < text2.length) {
     document.getElementById("typeout2").innerHTML += text2.charAt(j);
@@ -22,7 +22,7 @@ function typeWriter2() {
   }
 }
 
-setTimeout(addclass, 6500);
+setTimeout(addclass, 3500);
 function addclass() {
   document.getElementById("iconleft").classList.add("fromleft");
   document.getElementById("iconright").classList.add("fromright");
@@ -32,71 +32,71 @@ function addclass() {
 
 
 // --for loading screen
-let timer;
+// let timer;
 
-function loading() {
-  timer = setTimeout(showPage, 500);
-  console.log(timer);
-}
+// function loading() {
+//   timer = setTimeout(showPage, 500);
+//   console.log(timer);
+// }
 
-function showPage() {
-  document.getElementById("loader").style.display = "none";
-  document.getElementById("wholediv").style.display = "block";
-}
+// function showPage() {
+//   document.getElementById("loader").style.display = "none";
+//   document.getElementById("wholediv").style.display = "block";
+// }
 
 
 // --for dark mode toggle
-function toggle1(){
-  const lightToggle = document.getElementById("light");
-  const darkToggle = document.getElementById("dark");
-  // const all = document.getElementById("body");
-  const navItem = document.getElementsByClassName("c-nav__link");
-  const topAbout = document.getElementById("topAbout");
-  const wholediv = document.getElementById("wholediv");
+// function toggle1(){
+//   const lightToggle = document.getElementById("light");
+//   const darkToggle = document.getElementById("dark");
+//   // const all = document.getElementById("body");
+//   const navItem = document.getElementsByClassName("c-nav__link");
+//   const topAbout = document.getElementById("topAbout");
+//   const wholediv = document.getElementById("wholediv");
 
-  const body = document.querySelector("body");
-  const top = document.getElementById("top");
-  const about = document.getElementById("about");
-  const skills = document.getElementById("skills");
-  const works = document.getElementById("works");
-  const contact = document.getElementById("contact");
+//   const body = document.querySelector("body");
+//   const top = document.getElementById("top");
+//   const about = document.getElementById("about");
+//   const skills = document.getElementById("skills");
+//   const works = document.getElementById("works");
+//   const contact = document.getElementById("contact");
 
-  // console.log(navItem);
-  if(lightToggle.style.display === "block"){
-    darkToggle.style.display = "block";
-    lightToggle.style.display ="none";
-    // all.classList.add("darkmode")
-    for (let i = 0; i < navItem.length; i++) {
-      navItem[i].classList.add("dark")
-    }
-    body.style.backgroundImage = "none";
-    top.style.backgroundColor = "var(--dark1)";
-    about.style.backgroundColor = "var(--dark1)";
-    skills.style.backgroundColor = "var(--dark1)";
-    works.style.backgroundColor = "var(--dark1)";
-    contact.style.backgroundColor = "var(--dark1)";
+//   // console.log(navItem);
+//   if(lightToggle.style.display === "block"){
+//     darkToggle.style.display = "block";
+//     lightToggle.style.display ="none";
+//     // all.classList.add("darkmode")
+//     for (let i = 0; i < navItem.length; i++) {
+//       navItem[i].classList.add("dark")
+//     }
+//     body.style.backgroundImage = "none";
+//     top.style.backgroundColor = "var(--dark1)";
+//     about.style.backgroundColor = "var(--dark1)";
+//     skills.style.backgroundColor = "var(--dark1)";
+//     works.style.backgroundColor = "var(--dark1)";
+//     contact.style.backgroundColor = "var(--dark1)";
 
-    topAbout.classList.remove("topABout")
-    wholediv.classList.add("dark");
-  }
-  else{
-    lightToggle.style.display = "block";
-    darkToggle.style.display = "none";
-    // all.classList.remove("darkmode")
-    for (let i = 0; i < navItem.length; i++) {
-      navItem[i].classList.remove("dark");
-    }
+//     topAbout.classList.remove("topABout")
+//     wholediv.classList.add("dark");
+//   }
+//   else{
+//     lightToggle.style.display = "block";
+//     darkToggle.style.display = "none";
+//     // all.classList.remove("darkmode")
+//     for (let i = 0; i < navItem.length; i++) {
+//       navItem[i].classList.remove("dark");
+//     }
 
-    top.style.backgroundColor = "none";
-    about.style.backgroundColor = "none";
-    skills.style.backgroundColor = "none";
-    works.style.backgroundColor = "none";
-    contact.style.backgroundColor = "none";
+//     top.style.backgroundColor = "none";
+//     about.style.backgroundColor = "none";
+//     skills.style.backgroundColor = "none";
+//     works.style.backgroundColor = "none";
+//     contact.style.backgroundColor = "none";
 
-    topAbout.classList.add("topABout");
+//     topAbout.classList.add("topABout");
     
-  }
-}
+//   }
+// }
 
 function toggle(){
   const lightToggle = document.getElementById("light");
@@ -108,9 +108,11 @@ function toggle(){
   const skillsWorks = document.getElementById("skillsWorks");
   const worksContact = document.getElementById("worksContact");
 
-  const arrowNext = document.querySelector("swiper-button-next");
-  const arrowPrev = document.querySelector("swiper-button-prev");
+  const arrowNext = document.getElementsByClassName("swiper-button-next");
+  const arrowPrev = document.getElementsByClassName("swiper-button-prev");
   // const bulletActive = document.getElementsByClassName("swiper-pagination-bullet-active");
+
+  const resume = document.getElementById("resume");
 
   if(lightToggle.style.display === "block"){
     darkToggle.style.display = "block";
@@ -125,13 +127,16 @@ function toggle(){
     skillsWorks.style.backgroundImage = "none";
     worksContact.style.backgroundImage = "none";
 
+    resume.style.color = "var(--yellow)";
+
+    console.log("first time click")
     // for (let i = 0; i < bullet.length; i++) {
     //   bullet[i].style.backgroundColor = "var(--white)";
     // }
 
     // bulletActive.style.backgroundColor = "var(--yellow)";
-    arrowNext.style.color = "var(--yellow) !important";
-    arrowPrev.style.color = "var(--yellow) !important";
+    // arrowNext.style.color = "var(--yellow) !important";
+    // arrowPrev.style.color = "var(--yellow) !important";
 
   }
   else{
@@ -146,6 +151,11 @@ function toggle(){
     topAbout.style.backgroundImage = "url(assets/img/pc/stacked-waves-haikei2.svg)";
     skillsWorks.style.backgroundImage = "url(assets/img/pc/blob-haikei.svg)";
     worksContact.style.backgroundImage = "url(assets/img/pc/wave-haikeib.svg)";
+
+    resume.style.color = "var(--dark)";
+
+    // arrowNext.style.color = "var(--yellow) !important";
+    // arrowPrev.style.color = "var(--yellow) !important";
 
     // for (let i = 0; i < bullet.length; i++) {
     //   bullet[i].style.backgroundColor = "var(--dark)";
